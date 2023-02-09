@@ -11,7 +11,7 @@ pipeline {
         SMATPROP_WEBHOOK      = credentials('smatprop-webhook')
         TSIGIRO_WEBHOOK       = credentials('tsigiro-webhook')
     }
-
+    
     tools {nodejs "NODEJS"} // NodeJS v16.13.2
 
     stages {

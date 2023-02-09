@@ -91,7 +91,6 @@ class Root extends Component {
                         <Route path="/blog-right-sidebar" component={ BlogRightSidebar } />
                         <Route path="/blog" component={ Blog } />
 
-
                         <Route path="/blog-details" component={ BlogDetails } />
                         <Route path="/contact" component={ Contact } />
                         <Route path="/cart" component={ Cart } />
