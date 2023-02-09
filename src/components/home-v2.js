@@ -22,6 +22,7 @@ const Home_V2 = () => {
         <Aboutv3 />
         <h1>
             This is a sample update to the home-v2.js file
+            
         </h1>
         <Video />
         <Features customClass="ltn__feature-area section-bg-1--- pt-115 pb-90 mb-120---"/>
