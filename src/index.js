@@ -85,7 +85,6 @@ class Root extends Component {
                         <Route path="/shop-right-sidebar" component={ ShopRightSidebar } />
 
                         <Route path="/product-details" component={ ProdductDetails } />
-                        {/* blog */}
                         <Route path="/blog-grid" component={ BlogGrid } />
                         <Route path="/blog-left-sidebar" component={ BlogLeftSidebar } />
                         <Route path="/blog-right-sidebar" component={ BlogRightSidebar } />
