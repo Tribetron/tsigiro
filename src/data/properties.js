@@ -2,15 +2,15 @@
 const FLATDATA = [
   {
     id: 1,
-    name: "Luxury Villa with pool",
+    name: "Avondale Cottage",
     description:
       "The apartment consists of a large bright bedroom with a comfy king-sized bed, a modern fully-equipped kitchen and a sunlit living room with Apple TV and free Netflix account. It is the perfect place to stay for couples looking for a romantic location in the historic centre, within walking distance of some of the most beautiful sceneries you can find in the city and all famous landmarks. The sofa in the living room can also serve as an additional bed for a 3rd guest",
-    location: "Toronto, ON, Canada",
+    location: "Avondale, Harare, Zimbabwe",
     details: {
       guests: "2",
       bedrooms: "2",
       bathrooms: "1",
-      price: "$1000",
+      price: "$10090",
     },
     latitude: 12.9716,
     longitude: 77.5946,
@@ -35,15 +35,15 @@ const FLATDATA = [
   },
   {
     id: 2,
-    name: "Luxury flat with garden",
+    name: "Madokero Full House",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Madokero, Harare, Zimbabwe",
     details: {
       guests: "1",
       bedrooms: "1",
       bathrooms: "1",
-      price: "$1200",
+      price: "$178000",
     },
     longitude: 1.391793,
     latitude: 103.879652,
@@ -60,15 +60,15 @@ const FLATDATA = [
   },
   {
     id: 3,
-    name: "Studio apartment",
+    name: "Budiriro Co-house",
     description:
       "White and wooden furniture in modern kitchen with contemporary appliances",
-    location: "",
+    location: "Budiriro, Harare, Zimbabwe",
     details: {
       guests: "2",
       bedrooms: "3",
       bathrooms: "1",
-      price: "$1500",
+      price: "$15000",
     },
     longitude: 1.0931,
     latitude: 104.530553,
@@ -81,15 +81,15 @@ const FLATDATA = [
   },
   {
     id: 4,
-    name: "Apartment with pool",
+    name: "Sherwood Park Cottage",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Sherwood Park, Gweru, Zimbabwe",
     details: {
       guests: "1",
       bedrooms: "2",
       bathrooms: "1",
-      price: "$1070",
+      price: "$107000",
     },
     longitude: 0,
     latitude: 0,
@@ -102,15 +102,15 @@ const FLATDATA = [
   },
   {
     id: 5,
-    name: "Luxury 4 room flat",
+    name: "5 Bed Appartment",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Ferndale Village, Joburg, SA",
     details: {
-      guests: "",
-      bedrooms: "",
-      bathrooms: "",
-      price: "$2000",
+      guests: "2",
+      bedrooms: "5",
+      bathrooms: "6",
+      price: "$20000",
     },
     longitude: 0,
     latitude: 0,
@@ -123,15 +123,15 @@ const FLATDATA = [
   },
   {
     id: 6,
-    name: "Luxury 2 rooms apartment",
+    name: "2 Bed Cottage",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Greystone Park, Harare, Zimbabwe",
     details: {
-      guests: "",
-      bedrooms: "",
-      bathrooms: "",
-      price: "",
+      guests: "2",
+      bedrooms: "2",
+      bathrooms: "2",
+      price: "200000",
     },
     longitude: 0,
     latitude: 0,
@@ -144,15 +144,15 @@ const FLATDATA = [
   },
   {
     id: 7,
-    name: "Spacious Home Interio",
+    name: "Lochnivar Full House",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Lochnivar, Harare, Zimbabwe",
     details: {
-      guests: "",
-      bedrooms: "",
-      bathrooms: "",
-      price: "",
+      guests: "2",
+      bedrooms: "2",
+      bathrooms: "2",
+      price: "210000",
     },
     longitude: 0,
     latitude: 0,
@@ -165,15 +165,15 @@ const FLATDATA = [
   },
   {
     id: 8,
-    name: "High-rise Building",
+    name: "3 Bed Cottage",
     description:
       "Spacious light kitchen with dining table and modern furniture",
-    location: "",
+    location: "Mount Pleasant, Harare, Zimbabwe",
     details: {
-      guests: "",
-      bedrooms: "",
-      bathrooms: "",
-      price: "",
+      guests: "2",
+      bedrooms: "3",
+      bathrooms: "6",
+      price: "45000",
     },
     longitude: 0,
     latitude: 0,
