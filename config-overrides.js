@@ -1,11 +1,11 @@
-import path from "path";
+const path = require('path');
 
-export default function override(webpackConfig) {
+module.exports = function override(webpackConfig) {
   webpackConfig.module.rules.push({
     test: /\.mjs$/,
     include: /node_modules/,
-    type: "javascript/auto",
+    type: "javascript/auto"
   });
-
+  
   return webpackConfig;
 }
