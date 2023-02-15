@@ -31,6 +31,7 @@ function PropertyList() {
             price={properties.details.price}
             baths={properties.details.bathrooms}
             bedrooms={properties.details.bedrooms}
+            description={properties.description}
             images={properties.images}
           />
         );

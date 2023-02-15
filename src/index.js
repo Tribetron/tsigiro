@@ -23,6 +23,7 @@ import Location from "./components/location";
 import Shop from "./components/shop";
 import ShopGrid from "./components/shop-grid";
 import ProdductDetails from "./components/product-details";
+import PropertyDetails from "./components/property-details";
 import ShopLeftSidebar from "./components/shop-left-sidebar";
 import ShopRightSidebar from "./components/shop-right-sidebar";
 
@@ -76,6 +77,7 @@ class Root extends Component {
               <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
 
               <Route path="/product-details" component={ProdductDetails} />
+              <Route path="/property-details" component={PropertyDetails} />
               {/* blog */}
               <Route path="/blog-grid" component={BlogGrid} />
               <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
