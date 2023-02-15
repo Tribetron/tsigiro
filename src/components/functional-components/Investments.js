@@ -40,7 +40,7 @@ function Investments({
           <h2 className="product-title go-top">
             <Link
               to={{
-                pathname: "/property-details",
+                pathname: "/investment-details",
                 parseProps: {
                   id,
                   name,
@@ -91,7 +91,7 @@ function Investments({
             <li>
               <Link
                 to={{
-                  pathname: "/property-details",
+                  pathname: "/investment-details",
                   parseProps: {
                     id,
                     name,
