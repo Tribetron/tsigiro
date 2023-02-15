@@ -6,8 +6,6 @@ class NavbarV3 extends Component {
 
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let imgattr = 'logo'
-        let anchor = '#'
         return (
 		<div>
            <header className="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-2">
