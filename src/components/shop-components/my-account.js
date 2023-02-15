@@ -8,7 +8,7 @@ class MyAccount extends Component {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return <div className="liton__wishlist-area pb-70">
+    return <div className="liton__wishlist-area pb-70" style={{marginTop:100}}>
 	  <div className="container">
 		<div className="row">
 		  <div className="col-lg-12">
@@ -20,15 +20,15 @@ class MyAccount extends Component {
 					<div className="ltn__tab-menu-list mb-50">
 					  <div className="nav">                                            
 						<a className="active show" data-bs-toggle="tab" href="#ltn_tab_1_1">Dashboard <i className="fas fa-home" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Profiles <i className="fas fa-user" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_3">address <i className="fas fa-map-marker-alt" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_4">Account Details <i className="fas fa-user" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_5">My Properties <i className="fa-solid fa-list" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_6">Favorited Properties <i className="fa-solid fa-heart" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_7">Add Property <i className="fa-solid fa-map-location-dot" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_8">Payments <i className="fa-solid fa-money-check-dollar" /></a>
-						<a data-bs-toggle="tab" href="#ltn_tab_1_9">Change Password <i className="fa-solid fa-lock" /></a>
-						<a href="login.html">Logout <i className="fas fa-sign-out-alt" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Transactional Accounts<i class="fa-solid fa-id-card-clip"></i></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Active Investments<i className="fa-solid fa-map-location-dot" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Property Purchase Tracker <i className="fas fa-map-marker-alt" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Transactions <i className="fas fa-user" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Billing Settings<i className="fa-solid fa-list" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">History<i className="fa-solid fa-map-location-dot" /></a>
+						<a data-bs-toggle="tab" href="#ltn_tab_1_2">Payments <i className="fa-solid fa-money-check-dollar" /></a>
+						{/* <a data-bs-toggle="tab" href="#ltn_tab_1_9">Change Password <i className="fa-solid fa-lock" /></a> */}
+						{/* <a href="login.html">Logout <i className="fas fa-sign-out-alt" /></a> */}
 					  </div>
 					</div>
 				  </div>
@@ -36,8 +36,8 @@ class MyAccount extends Component {
 					<div className="tab-content">
 					  <div className="tab-pane fade active show" id="ltn_tab_1_1">
 						<div className="ltn__myaccount-tab-content-inner">
-						  <p>Hello <strong>UserName</strong> (not <strong>UserName</strong>? <small><a href="login.html">Log out</a></small> )</p>
-						  <p>From your account dashboard you can view your <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p>
+						  {/* <p>Hello <strong>UserName</strong> (not <strong>UserName</strong>? <small><a href="login.html">Log out</a></small> )</p> */}
+						  {/* <p>From your account dashboard you can view your <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p> */}
 						</div>
 					  </div>
 					  <div className="tab-pane fade" id="ltn_tab_1_2">
@@ -48,7 +48,7 @@ class MyAccount extends Component {
 							  <div className="author-img">
 								<img src={publicUrl+"assets/img/blog/author.jpg"} alt="Author Image" />
 							  </div>
-							  <div className="author-info">
+							  {/* <div className="author-info">
 								<h6>Agent of Property</h6>
 								<h2>Rosalina D. William</h2>
 								<div className="footer-address">
@@ -79,9 +79,9 @@ class MyAccount extends Component {
 									</li>
 								  </ul>
 								</div>
-							  </div>
+							  </div> */}
 							</div>
-							<div className="ltn__form-box contact-form-box box-shadow white-bg">
+							{/* <div className="ltn__form-box contact-form-box box-shadow white-bg">
 							  <h4 className="title-2">Get A Quote</h4>
 							  <form id="contact-form" action="mail.php" method="post">
 								<div className="row">
@@ -123,11 +123,11 @@ class MyAccount extends Component {
 								</div>
 								<p className="form-messege mb-0 mt-20" />
 							  </form>
-							</div>
+							</div> */}
 						  </div>
 						</div>
 					  </div>
-					  <div className="tab-pane fade" id="ltn_tab_1_3">
+					  {/* <div className="tab-pane fade" id="ltn_tab_1_3">
 						<div className="ltn__myaccount-tab-content-inner">
 						  <p>The following addresses will be used on the checkout page by default.</p>
 						  <div className="row">
@@ -151,7 +151,7 @@ class MyAccount extends Component {
 							</div>
 						  </div>
 						</div>
-					  </div>
+					  </div> */}
 					  <div className="tab-pane fade" id="ltn_tab_1_4">
 						<div className="ltn__myaccount-tab-content-inner">
 						  <p>The following addresses will be used on the checkout page by default.</p>

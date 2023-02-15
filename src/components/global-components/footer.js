@@ -40,7 +40,7 @@ class Footer_v1 extends Component {
 
     return (
       <footer className="ltn__footer-area  ">
-        <div className="footer-top-area  section-bg-2 plr--5">
+        {/* <div className="footer-top-area  section-bg-2 plr--5">
           <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-md-6 col-sm-6 col-12">
@@ -60,40 +60,6 @@ class Footer_v1 extends Component {
                     can dip into real estate, even when they’re swamped with
                     other responsibilities.
                   </p>
-                  {/* <div className="footer-address">
-                    <ul>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-placeholder" />
-                        </div>
-                        <div className="footer-address-info">
-                          <p>Brooklyn, New York, United States</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-call" />
-                        </div>
-                        <div className="footer-address-info">
-                          <p>
-                            <a href="tel:+0123-456789">+0123-456789</a>
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-mail" />
-                        </div>
-                        <div className="footer-address-info">
-                          <p>
-                            <a href="mailto:example@example.com">
-                              example@example.com
-                            </a>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div> */}
                   <div className="ltn__social-media mt-20">
                     <Social />
                   </div>
@@ -189,16 +155,11 @@ class Footer_v1 extends Component {
                     </form>
                   </div>
                   <h5 className="mt-30">We Accept</h5>
-                  {/* <img
-                    src={publicUrl + "assets/img/icons/payment-4.png"}
-                    alt="Payment Image"
-                  /> */}
-                  <h1>TSIGIRO</h1>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <Copyright />
       </footer>
     );

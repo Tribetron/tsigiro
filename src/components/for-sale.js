@@ -11,7 +11,7 @@ const PropertiesForSale = () => {
       <Navbar />
       <PageHeader headertitle="Properties For Sale" />
       <ShogGrid />
-      <CallToActionV1 />
+      {/* <CallToActionV1 /> */}
       <Footer />
     </div>
   );

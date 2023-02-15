@@ -17,6 +17,7 @@ class Navbar extends Component {
                       <Link to="/">
                         <img
                           src={publicUrl + "assets/img/logo.png"}
+                          style={{ width: "50px" }}
                           alt="Logo"
                         />
                       </Link>
@@ -45,12 +46,12 @@ class Navbar extends Component {
                           {/* <li>
                             <Link to="/about">About Us</Link>
                           </li> */}
-                          <li>
+                          {/* <li>
                             <Link to="/properties">For Sale</Link>
                           </li>
                           <li>
                             <Link to="/investing">For investing</Link>
-                          </li>
+                          </li> */}
                           {/* <li className="menu-icon">
                             <Link to="/blog-grid">News</Link>
                           </li> */}
@@ -168,13 +169,12 @@ class Navbar extends Component {
                         <i className="icon-cancel  for-search-close" />
                       </div>
                     </div>
-                    {/* <div className="header-search-1-form">
+                    <div className="header-search-1-form">
                       <form id="#" method="get" action="#">
                         <input
                           type="text"
                           name="search"
-                          defaultValue
-                          placeholder="Search here..."
+                          placeholder="Search for by location, address, zip, etc."
                         />
                         <button type="submit">
                           <span>
@@ -182,25 +182,64 @@ class Navbar extends Component {
                           </span>
                         </button>
                       </form>
-                    </div> */}
+                    </div>
                   </div>
                   {/* user-menu */}
                   <div className="ltn__drop-menu user-menu">
                     <ul>
                       <li>
                         <Link to="#">
-                          <i className="icon-user" />
+                          <i className="fas fa-home"/>
                         </Link>
                         <ul className="go-top">
                           <li>
-                            <Link to="/login">Sign in</Link>
+                            <Link to="/properties">Buy</Link>
                           </li>
                           <li>
-                            <Link to="/register">Register</Link>
+                            <Link to="/investing">Invest</Link>
                           </li>
                           <li>
-                            <Link to="/my-account">My Account</Link>
+                            <Link to="/my-account">My Portfolio</Link>
                           </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="ltn__drop-menu user-menu">
+                    <ul>
+                      <li>
+                        <Link to="#">
+                          <i class="fa-sharp fa-regular fa-earth-africa" style={{color:"#efb951"}}></i>
+                        </Link>
+                        <ul className="go-top">
+                          <li>
+                            <Link to="/">Zimbabwe</Link>
+                          </li>
+                          <li>
+                            <Link to="/">South Africa</Link>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                   <div>
+                    <div className="ltn__drop-menu user-menu">
+                  <ul>
+                      <li>
+                        <Link to="#">
+                           <i class="fa-solid fa-comment-dots"></i>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+                      <div className="ltn__drop-menu user-menu">
+                    <ul>
+                      <li>
+                        <Link to="#">
+                           <i class="fa-solid fa-grip"></i>
+                        </Link>
+                        <ul className="go-top" style={{width:250,height:200,marginTop:10,backgroundColor:'#efb951'}}>
                         </ul>
                       </li>
                     </ul>
@@ -254,7 +293,7 @@ class Navbar extends Component {
               </div>
               <button className="ltn__utilize-close">×</button>
             </div>
-            <div className="ltn__utilize-menu-search-form">
+            {/* <div className="ltn__utilize-menu-search-form">
               <form action={"#"}>
                 <input type="text" placeholder="Search..." />
                 <button>
@@ -446,8 +485,8 @@ class Navbar extends Component {
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>
-            </div>
-            <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
+            </div> */}
+            {/* <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
               <ul>
                 <li>
                   <Link to="/my-account" title="My Account">
@@ -476,8 +515,8 @@ class Navbar extends Component {
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div className="ltn__social-media-2">
+            </div> */}
+            {/* <div className="ltn__social-media-2">
               <ul>
                 <li>
                   <a href="#" title="Facebook">
@@ -500,12 +539,12 @@ class Navbar extends Component {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Utilize Cart Menu Start */}
-        <div
+        {/* <div
           id="ltn__utilize-cart-menu"
           className="ltn__utilize ltn__utilize-cart-menu"
         >
@@ -608,9 +647,8 @@ class Navbar extends Component {
               </div>
               <p>Free Shipping on All Orders Over $100!</p>
             </div>
-          </div>
-        </div>
-        {/* Utilize Cart Menu End */}
+          </div> */}
+        {/* </div> */}
       </div>
     );
   }

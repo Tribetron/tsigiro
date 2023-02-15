@@ -97,7 +97,6 @@ export default function Invest() {
           </div>
         </div>
       </div>
-
       {/* Add to cart */}
       <div className="ltn__modal-area ltn__add-to-cart-modal-area">
         <div className="modal fade" id="add_to_cart_modal" tabIndex={-1}>

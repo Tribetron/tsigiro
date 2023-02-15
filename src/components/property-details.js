@@ -13,7 +13,7 @@ const Property_Details = (props) => {
       <PageHeader headertitle="Property Details" customclass="mb-0" />
       <ProductSlider data={props.location.parseProps} />
       <ProductDetails data={props.location.parseProps} />
-      <CallToActionV1 />
+      {/* <CallToActionV1 /> */}
       <Footer />
     </div>
   );

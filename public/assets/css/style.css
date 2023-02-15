@@ -229,7 +229,7 @@ font-family: 'Poppins', sans-serif;
   /* Darken */
   --ltn__primary-color-3: #133236;
   /* Lighten */
-  --ltn__secondary-color: #ea9342;
+  --ltn__secondary-color: #47878a;
   --ltn__secondary-color-2: #cb3421;
   /* Darken */
   --ltn__secondary-color-3: #fb412a;
@@ -274,7 +274,7 @@ font-family: 'Poppins', sans-serif;
   /* Background Colors ( 1, 2, 3, 4, 5 )  */
   --section-bg-1: #f2f6f7;
   /* White */
-  --section-bg-2: #171b2a;
+  --section-bg-2: #ea9342;
   /* Black */
   --section-bg-5: #fff2f0;
   /* White */
@@ -15960,13 +15960,14 @@ input.cart-plus-minus-box {
 .car-price-filter-range .price_filter .ui-state-default:last-child::after {
   position: absolute;
   content: "";
-  top: -30px;
-  left: -5px;
-  background-image: url(../img/icons/car.png);
+  top:-10px;
+  left: -15px;
+  background-image: url(../img/logo.png);
   z-index: 99;
-  width: 125px;
-  height: 50px;
+  width: 50px;
+  height: 45px;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .car-price-filter-range .price_slider_amount > input[type="text"],

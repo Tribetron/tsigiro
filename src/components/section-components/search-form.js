@@ -8,7 +8,7 @@ class SearchForm extends Component {
     let imagealt = "image";
 
     return (
-      <div className="ltn__car-dealer-form-area mt--65 mt-120 pb-115---">
+      <div className="ltn__car-dealer-form-area mt--65 mt-120 pb-115---" style={{backgroundColor:'#f2f6f7',padding:20}}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -21,11 +21,11 @@ class SearchForm extends Component {
                       href="#ltn__form_tab_1_1"
                     >
                       <i className="fas fa-car" />
-                      Find A Car
+                      {/* Find A Car */}
                     </a>
                     <a data-bs-toggle="tab" href="#ltn__form_tab_1_2">
                       <i className="far fa-user" />
-                      Get a Dealer
+                      {/* Get a Dealer */}
                     </a>
                   </div>
                 </div>
@@ -39,11 +39,13 @@ class SearchForm extends Component {
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
                           <select className="nice-select">
                             <option>Choose Area</option>
-                            <option>chicago</option>
-                            <option>London</option>
-                            <option>Los Angeles</option>
-                            <option>New York</option>
-                            <option>New Jersey</option>
+                            <option>Harare</option>
+                            <option>Mashonaland West</option>
+                            <option>Mashonaland East</option>
+                            <option>Manicaland</option>
+                            <option>Masvingo</option>
+                            <option>Matebeleland North</option>
+                            <option>Matebeleland South</option>
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
@@ -59,6 +61,7 @@ class SearchForm extends Component {
                             <option>Apartments</option>
                             <option>Cottages</option>
                             <option>Houses</option>
+                            <option>Complex</option>
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">

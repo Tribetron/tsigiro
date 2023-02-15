@@ -20,8 +20,8 @@ class BannerV5 extends Component {
 							<div className="ltn__car-dealer-form-tab">
 								<div className="ltn__tab-menu  text-uppercase">
 								<div className="nav">
-									<a className="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i className="fas fa-home" />Rent Home</a>
-									<a data-bs-toggle="tab" href="#ltn__form_tab_1_2" className><i className="fas fa-home" />Sale Home</a>
+									<a className="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i className="fas fa-home" />Buy</a>
+									<a data-bs-toggle="tab" href="#ltn__form_tab_1_2" className><i className="fas fa-home" />Invest</a>
 								</div>
 								</div>
 								<div className="tab-content">
@@ -32,31 +32,32 @@ class BannerV5 extends Component {
 										<select className="nice-select">
 											<option>Property Type</option>
 											<option>Apartment</option>
-											<option>Co-op</option>
-											<option>Condo</option>
+											<option>Commercial Property</option>
+											<option>Garden Flats</option>
 											<option>Single Family Home</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
 										<select className="nice-select">
-											<option>Location</option>
-											<option>chicago</option>
-											<option>London</option>
-											<option>Los Angeles</option>
-											<option>New York</option>
-											<option>New Jersey</option>
+											<option>Harare</option>
+											<option>Mashonaland West</option>
+											<option>Mashonaland East</option>
+											<option>Manicaland</option>
+											<option>Masvingo</option>
+											<option>Matebeleland North</option>
+											<option>Matebeleland South</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
 										<select className="nice-select">
 											<option>Sub Location</option>
-											<option>Bayonne</option>
-											<option>Greenville</option>
-											<option>Manhattan</option>
-											<option>Queens</option>
-											<option>The Heights</option>
-											<option>Upper East Side</option>
-											<option>West Side</option>
+											<option>Mt, Pleasant</option>
+											<option>Greencroft</option>
+											<option>Budiriro</option>
+											<option>Madokero</option>
+											<option>Zimre Park</option>
+											<option>Ruwa</option>
+											<option>Kuwadzana</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
@@ -88,7 +89,7 @@ class BannerV5 extends Component {
 										</div>
 										<div className="btn-wrapper text-center go-top">
 											{/* <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> */}
-											<Link to="/shop-right-sidebar" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</Link>
+											<Link to="/properties" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search Properties</Link>
 										</div>
 										</div>
 									</form>
@@ -101,31 +102,32 @@ class BannerV5 extends Component {
 										<select className="nice-select">
 											<option>Property Type</option>
 											<option>Apartment</option>
-											<option>Co-op</option>
-											<option>Condo</option>
+											<option>Commercial Property</option>
+											<option>Garden Flats</option>
 											<option>Single Family Home</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
 										<select className="nice-select">
-											<option>Location</option>
-											<option>chicago</option>
-											<option>London</option>
-											<option>Los Angeles</option>
-											<option>New York</option>
-											<option>New Jersey</option>
+											<option>Harare</option>
+											<option>Mashonaland West</option>
+											<option>Mashonaland East</option>
+											<option>Manicaland</option>
+											<option>Masvingo</option>
+											<option>Matebeleland North</option>
+											<option>Matebeleland South</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
 										<select className="nice-select">
 											<option>Sub Location</option>
-											<option>Bayonne</option>
-											<option>Greenville</option>
-											<option>Manhattan</option>
-											<option>Queens</option>
-											<option>The Heights</option>
-											<option>Upper East Side</option>
-											<option>West Side</option>
+											<option>Mt, Pleasant</option>
+											<option>Greencroft</option>
+											<option>Budiriro</option>
+											<option>Madokero</option>
+											<option>Zimre Park</option>
+											<option>Ruwa</option>
+											<option>Kuwadzana</option>
 										</select>
 										</div> 
 										<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
@@ -157,7 +159,7 @@ class BannerV5 extends Component {
 										</div>
 										<div className="btn-wrapper text-center go-top">
 											{/* <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> */}
-											<Link to="/shop-right-sidebar" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</Link>
+											<Link to="/investing" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search Investments</Link>
 										</div>
 										</div>
 									</form>

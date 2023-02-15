@@ -14,10 +14,10 @@ class FeaturesV1 extends Component {
           <div className="row">
             <div className="col-lg-12">
               <div className="section-title-area ltn__section-title-2--- text-center">
-                <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">
+                {/* <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">
                   Our Services
-                </h6>
-                <h1 className="section-title">Our Main Focus</h1>
+                </h6> */}
+                {/* <h1 className="section-title">Our Main Focus</h1> */}
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ class FeaturesV1 extends Component {
                 </div>
                 <div className="ltn__feature-info">
                   <h3>
-                    <Link to="/service-details">Buy a property</Link>
+                    <Link to="/properties">Buy a property</Link>
                   </h3>
                   <p>
                     You don’t have to be a pro to buy a property, get instant
@@ -55,7 +55,7 @@ class FeaturesV1 extends Component {
                 </div>
                 <div className="ltn__feature-info">
                   <h3>
-                    <Link to="/service-details">Invest in a property</Link>
+                    <Link to="/investing">Invest in a property</Link>
                   </h3>
                   <p>
                     Invest in fractions of properties across Africa, all without

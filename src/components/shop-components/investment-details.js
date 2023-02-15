@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import Navbar from "../global-components/navbar";
+import ProductSlider from "../shop-components/product-slider-v1";
 
 const InvestmentDetails = (data) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
   return (
-    <div className="ltn__shop-details-area pb-10">
+    <div>
+      <Navbar/>
+      {/* <ProductSlider/> */}
+    <div className="ltn__shop-details-area pb-10" style={{marginTop:50}}>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12">
@@ -112,6 +117,7 @@ const InvestmentDetails = (data) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
