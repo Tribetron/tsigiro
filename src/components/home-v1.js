@@ -8,6 +8,7 @@ import AboutV2 from "./section-components/about-v2";
 import Featuresv1 from "./section-components/features-v1";
 import CallToActionV1 from "./section-components/call-to-action-v1";
 import Footer from "./global-components/footer";
+import CopyRight from "./global-components/copyright";
 
 const Home_V1 = () => {
   return (
@@ -16,7 +17,7 @@ const Home_V1 = () => {
       <Banner />
       <SearchForm />
       <Aboutv1 />
-      <Counter />
+      {/* <Counter /> */}
       <AboutV2 />
       <Featuresv1 customClass="ltn__feature-area section-bg-1 pt-120 pb-90 mb-120---" />
       {/* <ProSlider /> */}
@@ -25,8 +26,9 @@ const Home_V1 = () => {
       {/* <Category /> */}
       {/* <Testimonial /> */}
       {/* <BlogSlider customClass="section-subtitle-2" /> */}
-      <CallToActionV1 />
-      <Footer />
+      {/* <CallToActionV1 /> */}
+      {/* <Footer /> */}
+      <CopyRight/>
     </div>
   );
 };

@@ -15,11 +15,10 @@ class Navbar extends Component {
                   <div className="site-logo-wrap">
                     <div className="site-logo go-top">
                       <Link to="/">
-                        {/* <img
+                        <img
                           src={publicUrl + "assets/img/logo.png"}
                           alt="Logo"
-                        /> */}
-                        <h1>TSIGIRO</h1>
+                        />
                       </Link>
                     </div>
                     <div className="get-support clearfix d-none">
@@ -40,12 +39,12 @@ class Navbar extends Component {
                     <nav>
                       <div className="ltn__main-menu go-top">
                         <ul>
-                          <li>
+                          {/* <li>
                             <Link to="/">Home</Link>
-                          </li>
-                          <li>
+                          </li> */}
+                          {/* <li>
                             <Link to="/about">About Us</Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="/properties">For Sale</Link>
                           </li>
@@ -152,9 +151,9 @@ class Navbar extends Component {
                               </li>
                             </ul>
                           </li> */}
-                          <li>
+                          {/* <li>
                             <Link to="/contact">Contact Us</Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
                     </nav>
@@ -169,7 +168,7 @@ class Navbar extends Component {
                         <i className="icon-cancel  for-search-close" />
                       </div>
                     </div>
-                    <div className="header-search-1-form">
+                    {/* <div className="header-search-1-form">
                       <form id="#" method="get" action="#">
                         <input
                           type="text"
@@ -183,7 +182,7 @@ class Navbar extends Component {
                           </span>
                         </button>
                       </form>
-                    </div>
+                    </div> */}
                   </div>
                   {/* user-menu */}
                   <div className="ltn__drop-menu user-menu">
@@ -207,7 +206,7 @@ class Navbar extends Component {
                     </ul>
                   </div>
                   {/* mini-cart */}
-                  <div className="mini-cart-icon">
+                  {/* <div className="mini-cart-icon">
                     <a
                       href="#ltn__utilize-cart-menu"
                       className="ltn__utilize-toggle"
@@ -215,7 +214,7 @@ class Navbar extends Component {
                       <i className="icon-shopping-cart"></i>
                       <sup>2</sup>
                     </a>
-                  </div>
+                  </div> */}
                   {/* mini-cart */}
                   {/* Mobile Menu Button */}
                   <div className="mobile-menu-toggle d-xl-none">
