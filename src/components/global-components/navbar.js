@@ -189,7 +189,7 @@ class Navbar extends Component {
                     <ul>
                       <li>
                         <Link to="#">
-                          <i className="fas fa-home"/>
+                          <i className="fas fa-home" />
                         </Link>
                         <ul className="go-top">
                           <li>
@@ -197,6 +197,9 @@ class Navbar extends Component {
                           </li>
                           <li>
                             <Link to="/investing">Invest</Link>
+                          </li>
+                          <li>
+                            <Link to="/enquire">Enquire</Link>
                           </li>
                           <li>
                             <Link to="/my-account">My Portfolio</Link>
@@ -209,7 +212,10 @@ class Navbar extends Component {
                     <ul>
                       <li>
                         <Link to="#">
-                          <i class="fa-sharp fa-regular fa-earth-africa" style={{color:"#efb951"}}></i>
+                          <i
+                            className="fa-sharp fa-regular fa-earth-africa"
+                            style={{ color: "#efb951" }}
+                          ></i>
                         </Link>
                         <ul className="go-top">
                           <li>
@@ -222,25 +228,32 @@ class Navbar extends Component {
                       </li>
                     </ul>
                   </div>
-                   <div>
+                  <div>
                     <div className="ltn__drop-menu user-menu">
-                  <ul>
-                      <li>
-                        <Link to="#">
-                           <i class="fa-solid fa-comment-dots"></i>
-                        </Link>
-                      </li>
-                    </ul>
+                      <ul>
+                        <li>
+                          <Link to="#">
+                            <i className="fa-solid fa-comment-dots"></i>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  </div>
-                      <div className="ltn__drop-menu user-menu">
+                  <div className="ltn__drop-menu user-menu">
                     <ul>
                       <li>
                         <Link to="#">
-                           <i class="fa-solid fa-grip"></i>
+                          <i className="fa-solid fa-grip"></i>
                         </Link>
-                        <ul className="go-top" style={{width:250,height:200,marginTop:10,backgroundColor:'#efb951'}}>
-                        </ul>
+                        <ul
+                          className="go-top"
+                          style={{
+                            width: 250,
+                            height: 200,
+                            marginTop: 10,
+                            backgroundColor: "#efb951",
+                          }}
+                        ></ul>
                       </li>
                     </ul>
                   </div>

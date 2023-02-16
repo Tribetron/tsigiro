@@ -6,29 +6,48 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 function Investments({
   id,
   name,
+  description,
   location,
   price,
+  fundingTarget,
+  interest,
+  rent,
+  marketValuation,
+  discount,
+  currentInvestment,
   bathrooms,
   bedrooms,
-  description,
+  rooms,
+  area,
+  type,
   images,
 }) {
   let publicUrl = process.env.PUBLIC_URL + "/";
+  const percentage = Math.floor((currentInvestment / marketValuation) * 100);
   return (
     <div className="col-lg-6 col-xl-6 col-sm-6 col-12">
       <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
         <div className="product-img go-top">
           <Link
             to={{
-              pathname: "/property-details",
+              pathname: "/investment-details",
               parseProps: {
                 id,
                 name,
+                description,
                 location,
                 price,
+                fundingTarget,
+                interest,
+                rent,
+                marketValuation,
+                discount,
+                currentInvestment,
                 bathrooms,
                 bedrooms,
-                description,
+                rooms,
+                area,
+                type,
                 images,
               },
             }}
@@ -44,11 +63,20 @@ function Investments({
                 parseProps: {
                   id,
                   name,
+                  description,
                   location,
                   price,
+                  fundingTarget,
+                  interest,
+                  rent,
+                  marketValuation,
+                  discount,
+                  currentInvestment,
                   bathrooms,
                   bedrooms,
-                  description,
+                  rooms,
+                  area,
+                  type,
                   images,
                 },
               }}
@@ -66,27 +94,27 @@ function Investments({
             </ul>
           </div>
           <ProgressBar
-            now={60}
-            label={`${60}%`}
+            now={percentage}
+            label={`${percentage}%`}
             style={{ marginTop: "20px", marginBottom: "20px" }}
           />
 
           <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
             <li>
-              Funding Target: <span>USD {price}</span>
+              Funding Target: <span>USD {fundingTarget}</span>
             </li>
 
             <li>
-              Interest Rate Of Return (RR): <span>10.6%</span>
+              Interest Rate Of Return (RR): <span>{interest} %</span>
             </li>
             <li>
-              Est Net Rental Yield: <span>6.82%</span>
+              Est Net Rental Yield: <span>{rent} %</span>
             </li>
             <li>
-              Market Valuation: <span>USD 100 000</span>
+              Market Valuation: <span>USD {marketValuation}</span>
             </li>
             <li>
-              Tsigiro Discount: <span>2.88%</span>
+              Tsigiro Discount: <span>{discount} %</span>
             </li>
             <li>
               <Link
@@ -95,11 +123,20 @@ function Investments({
                   parseProps: {
                     id,
                     name,
+                    description,
                     location,
                     price,
+                    fundingTarget,
+                    interest,
+                    rent,
+                    marketValuation,
+                    discount,
+                    currentInvestment,
                     bathrooms,
                     bedrooms,
-                    description,
+                    rooms,
+                    area,
+                    type,
                     images,
                   },
                 }}
