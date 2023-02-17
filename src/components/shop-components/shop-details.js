@@ -2,6 +2,11 @@ import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import "react-notifications/lib/notifications.css";
 
 const ShopDetails = (data) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
@@ -9,11 +14,15 @@ const ShopDetails = (data) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [payment, setPaymentDate] = useState("");
+  const propertyID = data.data.propertyID;
 
   const FormSubmit = (e) => {
     e.preventDefault();
-    const data = { fullName, email, phoneNumber, payment, prop };
-    //Post To Endpoint
+    const payload = { fullName, email, phoneNumber, payment, propertyID };
+    NotificationManager.success(
+      "Request Received Succesfully",
+      `Hi ${fullName} Your Request Has Been Successfully Sent, and One Of Our Agents Will Contact You As Soon As Possible`
+    );
   };
 
   return (
@@ -147,6 +156,7 @@ const ShopDetails = (data) => {
                     Send Request
                   </button>
                 </form>
+                <NotificationContainer />
               </div>
 
               {/* Banner Widget */}
