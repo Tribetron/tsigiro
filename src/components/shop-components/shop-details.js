@@ -12,7 +12,7 @@ const ShopDetails = (data) => {
 
   const FormSubmit = (e) => {
     e.preventDefault();
-    const data = { fullName, email, phoneNumber, payment };
+    const data = { fullName, email, phoneNumber, payment, prop };
     //Post To Endpoint
   };
 
