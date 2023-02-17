@@ -10,6 +10,7 @@ function Property({
   bedrooms,
   description,
   images,
+  propertyID,
 }) {
   let publicUrl = process.env.PUBLIC_URL + "/";
   return (
@@ -28,6 +29,7 @@ function Property({
                 bedrooms,
                 description,
                 images,
+                propertyID,
               },
             }}
           >
@@ -53,6 +55,7 @@ function Property({
                   bedrooms,
                   description,
                   images,
+                  propertyID,
                 },
               }}
             >
@@ -97,6 +100,7 @@ function Property({
                       bedrooms,
                       description,
                       images,
+                      propertyID,
                     },
                   }}
                 >

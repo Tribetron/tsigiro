@@ -35,7 +35,8 @@ const ShopDetails = (data) => {
               <div className="property-detail-info-list section-bg-1 clearfix mb-60">
                 <ul>
                   <li>
-                    <label>Property ID:</label> <span>HZ29</span>
+                    <label>Property ID:</label>{" "}
+                    <span>{data.data.propertyID}</span>
                   </li>
                   <li>
                     <label>Home Area: </label> <span>120 sqft</span>
@@ -102,6 +103,16 @@ const ShopDetails = (data) => {
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
+                    style={{ height: "70%", borderRadius: "5px" }}
+                  />
+                  <label id="propertyID">Property ID*</label>
+                  <input
+                    type="text"
+                    name="propertyID"
+                    id="propertyID"
+                    value={data.data.propertyID}
+                    readOnly
+                    placeholder="Your Name*"
                     style={{ height: "70%", borderRadius: "5px" }}
                   />
                   <label id="phone">Your Phone Number*</label>

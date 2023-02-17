@@ -33,6 +33,7 @@ function PropertyList() {
             bedrooms={properties.details.bedrooms}
             description={properties.description}
             images={properties.images}
+            propertyID={properties.propertyID}
           />
         );
       })
