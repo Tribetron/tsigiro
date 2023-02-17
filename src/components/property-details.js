@@ -11,7 +11,7 @@ const Property_Details = (props) => {
     <div>
       <Navbar />
       <PageHeader headertitle="Property Details" customclass="mb-0" />
-      <ProductSlider data={props.location.parseProps} />
+      {/* <ProductSlider data={props.location.parseProps} /> */}
       <ProductDetails data={props.location.parseProps} />
       {/* <CallToActionV1 /> */}
       <Footer />

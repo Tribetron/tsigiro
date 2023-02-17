@@ -1,8 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const ShopDetails = (data) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [payment, setPaymentDate] = useState("");
+
+  const FormSubmit = (e) => {
+    e.preventDefault();
+    const data = { fullName, email, phoneNumber, payment };
+    //Post To Endpoint
+  };
+
   return (
     <div className="ltn__shop-details-area pb-10">
       <div className="container">
@@ -59,41 +72,66 @@ const ShopDetails = (data) => {
               {/* APARTMENTS PLAN AREA END */}
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4" style={{ marginTop: "100px" }}>
             <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar---">
               {/* Form Widget */}
               <div className="widget ltn__form-widget">
                 <h4 className="ltn__widget-title ltn__widget-title-border-2">
                   Request To Purchase Property
                 </h4>
-                <form action="#">
-                  <input type="text" name="yourname" placeholder="Your Name*" />
+                <form
+                  onSubmit={(e) => {
+                    FormSubmit(e);
+                  }}
+                >
                   <input
                     type="text"
+                    name="yourname"
+                    value={fullName}
+                    required
+                    placeholder="Your Name*"
+                    onChange={(e) => setFullName(e.target.value)}
+                    style={{ height: "70%", borderRadius: "5px" }}
+                  />
+                  <input
+                    type="email"
                     name="youremail"
+                    required
                     placeholder="Your e-Mail*"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    style={{ height: "70%", borderRadius: "5px" }}
                   />
-                  <input
-                    type="text"
-                    name="yourphone"
-                    placeholder="Your Phone Number*"
+                  <label id="phone">Your Phone Number*</label>
+                  <PhoneInput
+                    country={"zw"}
+                    id="phone"
+                    value={phoneNumber}
+                    onChange={(phoneNumber) => setPhoneNumber(phoneNumber)}
+                    style={{ marginBottom: "20px" }}
+                    inputProps={{
+                      required: true,
+                    }}
                   />
-                  <label>Preferred Purchase Timeline*</label>
+                  <label id="date">Preferred Purchase Timeline*</label>
                   <input
                     type="date"
+                    id="date"
                     name="timeline"
+                    value={payment}
+                    required
                     style={{ width: "100%", height: "100%" }}
+                    onChange={(e) => {
+                      setPaymentDate(e.target.value);
+                    }}
                   />
-
-                  {/* <textarea
-                    name="yourmessage"
-                    placeholder="Write Message..."
-                    defaultValue={""}
-                  /> */}
                   <button
                     type="submit"
                     className="btn theme-btn-1"
                     style={{ marginTop: "20px" }}
+                    disabled={phoneNumber.length <= 9}
                   >
                     Send Request
                   </button>
