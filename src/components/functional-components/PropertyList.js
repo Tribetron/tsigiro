@@ -28,12 +28,17 @@ function PropertyList() {
             key={properties.id}
             name={properties.name}
             location={properties.location}
-            price={properties.details.price}
-            baths={properties.details.bathrooms}
-            bedrooms={properties.details.bedrooms}
+            price={properties.price}
+            bathrooms={properties.bathrooms}
+            bedrooms={properties.bedrooms}
+            rooms={properties.rooms}
             description={properties.description}
             images={properties.images}
             propertyID={properties.propertyID}
+            x={properties.dimensionsX}
+            y={properties.dimensionsY}
+            propertyStatus={properties.propertyStatus}
+            size={properties.size}
           />
         );
       })

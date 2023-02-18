@@ -9,7 +9,7 @@ const PropertiesForInvesting = () => {
   return (
     <div>
       <Navbar />
-      {/* <PageHeader headertitle="Properties For Investing" /> */}
+      <PageHeader headertitle="Properties For Investing" />
       <Invest />
       {/* <CallToActionV1 /> */}
       <Footer />

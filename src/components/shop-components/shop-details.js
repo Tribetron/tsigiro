@@ -48,10 +48,11 @@ const ShopDetails = (data) => {
                     <span>{data.data.propertyID}</span>
                   </li>
                   <li>
-                    <label>Home Area: </label> <span>120 sqft</span>
+                    <label>Home Area: </label>{" "}
+                    <span>{data.data.size} square meters</span>
                   </li>
                   <li>
-                    <label>Rooms:</label> <span>7</span>
+                    <label>Rooms:</label> <span>{data.data.rooms}</span>
                   </li>
                   <li>
                     <label>Baths:</label> <span>{data.data.bathrooms}</span>
@@ -65,16 +66,20 @@ const ShopDetails = (data) => {
                     <label>Lot Area:</label> <span>HZ29 </span>
                   </li>
                   <li>
-                    <label>Lot dimensions:</label> <span>120 sqft</span>
+                    <label>Lot dimensions:</label>{" "}
+                    <span>
+                      {data.data.x} x {data.data.y} m
+                    </span>
                   </li>
                   <li>
                     <label>Beds:</label> <span>{data.data.bedrooms}</span>
                   </li>
                   <li>
-                    <label>Price:</label> <span>{data.data.price}</span>
+                    <label>Price:</label> <span>USD {data.data.price}</span>
                   </li>
                   <li>
-                    <label>Property Status:</label> <span>For Sale</span>
+                    <label>Property Status:</label>{" "}
+                    <span>{data.data.propertyStatus}</span>
                   </li>
                 </ul>
               </div>

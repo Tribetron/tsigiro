@@ -42,6 +42,11 @@ function InvestList() {
             area={investments.area}
             type={investments.type}
             images={investments.images}
+            propertyID={investments.propertyID}
+            x={investments.dimensionsX}
+            y={investments.dimensionsY}
+            propertyStatus={investments.propertyStatus}
+            size={investments.size}
           />
         );
       })

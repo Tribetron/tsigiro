@@ -18,6 +18,11 @@ const INVESTMENTS = [
     rooms: 10,
     area: "harareWest",
     type: "cottage",
+    size: 1000,
+    dimensionsX: 200,
+    dimensionsY: 50,
+    propertyStatus: "For Investing",
+    propertyID: "sdfsdfsdf-sdfsdfsdf",
     images: [
       {
         imId: 1,
@@ -57,6 +62,11 @@ const INVESTMENTS = [
     rooms: 10,
     area: "harareEast",
     type: "house",
+    size: 1000,
+    dimensionsX: 200,
+    dimensionsY: 50,
+    propertyStatus: "For Investing",
+    propertyID: "sdfsdfsdf-sdfsdfsdf",
     images: [
       {
         imId: 1,

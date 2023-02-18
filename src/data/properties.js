@@ -6,14 +6,15 @@ const FLATDATA = [
     description:
       "The apartment consists of a large bright bedroom with a comfy king-sized bed, a modern fully-equipped kitchen and a sunlit living room with Apple TV and free Netflix account. It is the perfect place to stay for couples looking for a romantic location in the historic centre, within walking distance of some of the most beautiful sceneries you can find in the city and all famous landmarks. The sofa in the living room can also serve as an additional bed for a 3rd guest",
     location: "Avondale, Harare, Zimbabwe",
-    details: {
-      guests: "2",
-      bedrooms: "2",
-      bathrooms: "1",
-      price: "$10090",
-    },
-    latitude: 12.9716,
-    longitude: 77.5946,
+    guests: 3,
+    bedrooms: 2,
+    bathrooms: 1,
+    rooms: 7,
+    price: 10090,
+    size: 1000,
+    dimensionsX: 200,
+    dimensionsY: 50,
+    propertyStatus: "For Sale",
     propertyID: "sdfsdfsdf-sdfsdfsdf",
     images: [
       {
@@ -40,14 +41,15 @@ const FLATDATA = [
     description:
       "Spacious light kitchen with dining table and modern furniture",
     location: "Madokero, Harare, Zimbabwe",
-    details: {
-      guests: "1",
-      bedrooms: "1",
-      bathrooms: "1",
-      price: "$178000",
-    },
-    longitude: 1.391793,
-    latitude: 103.879652,
+    guests: 5,
+    bedrooms: 4,
+    bathrooms: 2,
+    rooms: 10,
+    price: 178000,
+    size: 1000,
+    dimensionsX: 200,
+    dimensionsY: 50,
+    propertyStatus: "For Sale",
     propertyID: "afdsfgsfg-jhjfjdkdsf",
     images: [
       {

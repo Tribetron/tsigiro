@@ -48,6 +48,7 @@ import PropertiesForInvesting from "./components/for-investing";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import InvestmentDetails from "./components/shop-components/investment-details";
+import "bootstrap/dist/css/bootstrap.css";
 
 class Root extends Component {
   render() {

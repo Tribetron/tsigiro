@@ -21,9 +21,17 @@ function Investments({
   area,
   type,
   images,
+  propertyID,
+  x,
+  y,
+  propertyStatus,
+  size,
 }) {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const percentage = Math.floor((currentInvestment / marketValuation) * 100);
+  function currencyFormat(num) {
+    return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  }
   return (
     <div className="col-lg-6 col-xl-6 col-sm-6 col-12">
       <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
@@ -49,6 +57,11 @@ function Investments({
                 area,
                 type,
                 images,
+                propertyID,
+                x,
+                y,
+                propertyStatus,
+                size,
               },
             }}
           >
@@ -78,6 +91,11 @@ function Investments({
                   area,
                   type,
                   images,
+                  propertyID,
+                  x,
+                  y,
+                  propertyStatus,
+                  size,
                 },
               }}
             >
@@ -101,7 +119,7 @@ function Investments({
 
           <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
             <li>
-              Funding Target: <span>USD {fundingTarget}</span>
+              Funding Target: <span>USD {currencyFormat(fundingTarget)}</span>
             </li>
 
             <li>
@@ -111,7 +129,8 @@ function Investments({
               Est Net Rental Yield: <span>{rent} %</span>
             </li>
             <li>
-              Market Valuation: <span>USD {marketValuation}</span>
+              Market Valuation:{" "}
+              <span>USD {currencyFormat(marketValuation)}</span>
             </li>
             <li>
               Tsigiro Discount: <span>{discount} %</span>
@@ -138,6 +157,11 @@ function Investments({
                     area,
                     type,
                     images,
+                    propertyID,
+                    x,
+                    y,
+                    propertyStatus,
+                    size,
                   },
                 }}
               >
