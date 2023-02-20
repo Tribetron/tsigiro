@@ -26,6 +26,7 @@ function Investments({
   y,
   propertyStatus,
   size,
+  share,
 }) {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const percentage = Math.floor((currentInvestment / marketValuation) * 100);
@@ -62,6 +63,7 @@ function Investments({
                 y,
                 propertyStatus,
                 size,
+                share,
               },
             }}
           >
@@ -69,49 +71,16 @@ function Investments({
           </Link>
         </div>
         <div className="product-info">
-          <h2 className="product-title go-top">
-            <Link
-              to={{
-                pathname: "/investment-details",
-                parseProps: {
-                  id,
-                  name,
-                  description,
-                  location,
-                  price,
-                  fundingTarget,
-                  interest,
-                  rent,
-                  marketValuation,
-                  discount,
-                  currentInvestment,
-                  bathrooms,
-                  bedrooms,
-                  rooms,
-                  area,
-                  type,
-                  images,
-                  propertyID,
-                  x,
-                  y,
-                  propertyStatus,
-                  size,
-                },
-              }}
-            >
-              {name}
-            </Link>
-          </h2>
+          <h2 className="product-title go-top">{name}</h2>
           <div className="product-img-location go-top">
             <ul>
               <li>
-                <Link to="/contact">
-                  <i className="flaticon-pin" /> {location}
-                </Link>
+                <i className="flaticon-pin" /> {location}
               </li>
             </ul>
           </div>
           <ProgressBar
+            variant="success"
             now={percentage}
             label={`${percentage}%`}
             style={{ marginTop: "20px", marginBottom: "20px" }}
@@ -133,42 +102,49 @@ function Investments({
               <span>USD {currencyFormat(marketValuation)}</span>
             </li>
             <li>
-              Tsigiro Discount: <span>{discount} %</span>
+              Current Share Price:{" "}
+              <span>USD {currencyFormat(share)} per share</span>
             </li>
             <li>
-              <Link
-                to={{
-                  pathname: "/investment-details",
-                  parseProps: {
-                    id,
-                    name,
-                    description,
-                    location,
-                    price,
-                    fundingTarget,
-                    interest,
-                    rent,
-                    marketValuation,
-                    discount,
-                    currentInvestment,
-                    bathrooms,
-                    bedrooms,
-                    rooms,
-                    area,
-                    type,
-                    images,
-                    propertyID,
-                    x,
-                    y,
-                    propertyStatus,
-                    size,
-                  },
-                }}
-              >
-                <Button>View Property</Button>
-              </Link>
+              Tsigiro Discount: <span>{discount} %</span>
             </li>
           </ul>
+          <Link
+            to={{
+              pathname: "/investment-details",
+              parseProps: {
+                id,
+                name,
+                description,
+                location,
+                price,
+                fundingTarget,
+                interest,
+                rent,
+                marketValuation,
+                discount,
+                currentInvestment,
+                bathrooms,
+                bedrooms,
+                rooms,
+                area,
+                type,
+                images,
+                propertyID,
+                x,
+                y,
+                propertyStatus,
+                size,
+                share,
+              },
+            }}
+          >
+            <Button
+              style={{ backgroundColor: "#47878a", marginBottom: "10px" }}
+            >
+              View Property
+            </Button>
+          </Link>
         </div>
         <div className="product-info-bottom"></div>
       </div>

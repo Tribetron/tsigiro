@@ -51,6 +51,7 @@ const FLATDATA = [
     dimensionsY: 50,
     propertyStatus: "For Sale",
     propertyID: "afdsfgsfg-jhjfjdkdsf",
+
     images: [
       {
         imId: 1,

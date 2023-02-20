@@ -56,37 +56,11 @@ function Property({
               <li className="sale-badg">{propertyStatus}</li>
             </ul>
           </div>
-          <h2 className="product-title go-top">
-            <Link
-              to={{
-                pathname: "/property-details",
-                parseProps: {
-                  id,
-                  name,
-                  location,
-                  price,
-                  bathrooms,
-                  bedrooms,
-                  rooms,
-                  description,
-                  images,
-                  propertyID,
-                  x,
-                  y,
-                  propertyStatus,
-                  size,
-                },
-              }}
-            >
-              {name}
-            </Link>
-          </h2>
+          <h2 className="product-title go-top">{name}</h2>
           <div className="product-img-location go-top">
             <ul>
               <li>
-                <Link to="/contact">
-                  <i className="flaticon-pin" /> {location}
-                </Link>
+                <i className="flaticon-pin" /> {location}
               </li>
             </ul>
           </div>
@@ -129,7 +103,9 @@ function Property({
               },
             }}
           >
-            <Button style={{ margin: "10px" }}>View Property</Button>
+            <Button style={{ backgroundColor: "#47878a", margin: "10px" }}>
+              View Property
+            </Button>
           </Link>
         </div>
         <div className="product-info-bottom">

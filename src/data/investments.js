@@ -23,6 +23,7 @@ const INVESTMENTS = [
     dimensionsY: 50,
     propertyStatus: "For Investing",
     propertyID: "sdfsdfsdf-sdfsdfsdf",
+    sharePrice: 10,
     images: [
       {
         imId: 1,
@@ -67,6 +68,7 @@ const INVESTMENTS = [
     dimensionsY: 50,
     propertyStatus: "For Investing",
     propertyID: "sdfsdfsdf-sdfsdfsdf",
+    sharePrice: 20,
     images: [
       {
         imId: 1,

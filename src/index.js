@@ -49,6 +49,7 @@ import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import InvestmentDetails from "./components/shop-components/investment-details";
 import "bootstrap/dist/css/bootstrap.css";
+import PropertyInquiry from "./components/functional-components/PropertyInquiry";
 
 class Root extends Component {
   render() {
@@ -81,6 +82,7 @@ class Root extends Component {
               <Route path="/product-details" component={ProdductDetails} />
               <Route path="/property-details" component={PropertyDetails} />
               <Route path="/investment-details" component={InvestmentDetails} />
+              <Route path="/property-inquiry" component={PropertyInquiry} />
               {/* blog */}
               <Route path="/blog-grid" component={BlogGrid} />
               <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />

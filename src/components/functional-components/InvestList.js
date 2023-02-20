@@ -47,6 +47,7 @@ function InvestList() {
             y={investments.dimensionsY}
             propertyStatus={investments.propertyStatus}
             size={investments.size}
+            share={investments.sharePrice}
           />
         );
       })

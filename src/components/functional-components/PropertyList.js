@@ -25,7 +25,7 @@ function PropertyList() {
       data.payload.map((properties) => {
         return (
           <Property
-            key={properties.id}
+            key={properties.propertyID}
             name={properties.name}
             location={properties.location}
             price={properties.price}

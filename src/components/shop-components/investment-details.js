@@ -53,10 +53,11 @@ const InvestmentDetails = (data) => {
         `Hi ${userAccount.name} Your Have Insufficient Funds To Perform This Transaction}`
       );
     }
+    const shares = Math.floor(investment / dataSource.share);
     const payload = { userAccount, propertyID: dataSource.propertyID };
     NotificationManager.success(
       "Request Received Succesfully",
-      `Hi ${userAccount.name} Your Have Successfully Invested USD ${investment}`
+      `Hi ${userAccount.name} You Have Successfully Bought ${shares} Shares In ${dataSource.name}`
     );
   };
 
@@ -134,12 +135,13 @@ const InvestmentDetails = (data) => {
                     {currencyFormat(dataSource.fundingTarget)}
                   </Card.Header>
                   <ProgressBar
+                    variant="success"
                     now={percentage}
                     label={`${percentage}%`}
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: "80%",
+                      width: "90%",
                       marginLeft: "5px",
                     }}
                   />
@@ -161,6 +163,7 @@ const InvestmentDetails = (data) => {
                       Tsigiro Discount: <span>{dataSource.discount}%</span>
                     </Card.Text>
                     <Button
+                      style={{ backgroundColor: "#47878a" }}
                       type="submit"
                       disable={
                         dataSource.marketValuation === dataSource.fundingTarget
@@ -207,6 +210,18 @@ const InvestmentDetails = (data) => {
                       </Form.Group>
                       <Form.Group
                         className="mb-3"
+                        controlId="exampleForm.ControlInput6"
+                      >
+                        <Form.Label>Price Per Share (USD)</Form.Label>
+                        <Form.Control
+                          type="number"
+                          value={dataSource.share}
+                          autoFocus
+                          readOnly
+                        />
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3"
                         controlId="exampleForm.ControlInput2"
                       >
                         <Form.Label>
@@ -242,10 +257,15 @@ const InvestmentDetails = (data) => {
                     </Form>
                   </Modal.Body>
                   <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button onClick={handleClose} variant="danger">
                       Close
                     </Button>
-                    <Button onClick={FormSubmit}>Invest</Button>
+                    <Button
+                      onClick={FormSubmit}
+                      style={{ backgroundColor: "#47878a" }}
+                    >
+                      Invest
+                    </Button>
                   </Modal.Footer>
                 </Modal>
                 <NotificationContainer />
@@ -258,6 +278,313 @@ const InvestmentDetails = (data) => {
                 </Link>
               </div>
             </aside>
+          </div>
+          <div className="col-12">
+            <h4 className="title-2">Property Images</h4>
+            <div className="ltn__property-details-gallery mb-30">
+              <div className="row">
+                <div className="col-md-6">
+                  <a
+                    href={publicUrl + "assets/img/others/14.jpg"}
+                    data-rel="lightcase:myCollection"
+                  >
+                    <img
+                      className="mb-30"
+                      src={publicUrl + "assets/img/others/14.jpg"}
+                      alt="Image"
+                    />
+                  </a>
+                  <a
+                    href={publicUrl + "assets/img/others/15.jpg"}
+                    data-rel="lightcase:myCollection"
+                  >
+                    <img
+                      className="mb-30"
+                      src={publicUrl + "assets/img/others/15.jpg"}
+                      alt="Image"
+                    />
+                  </a>
+                </div>
+                <div className="col-md-6">
+                  <a
+                    href={publicUrl + "assets/img/others/16.jpg"}
+                    data-rel="lightcase:myCollection"
+                  >
+                    <img
+                      className="mb-30"
+                      src={publicUrl + "assets/img/others/16.jpg"}
+                      alt="Image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h4 className="title-2">Floor Plans</h4>
+            {/* APARTMENTS PLAN AREA START */}
+            <div className="ltn__apartments-plan-area product-details-apartments-plan mb-60">
+              <div className="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center---">
+                <div className="nav">
+                  <a data-bs-toggle="tab" href="#liton_tab_3_1">
+                    First Floor
+                  </a>
+                  <a
+                    className="active show"
+                    data-bs-toggle="tab"
+                    href="#liton_tab_3_2"
+                  >
+                    Second Floor
+                  </a>
+                  <a data-bs-toggle="tab" href="#liton_tab_3_3">
+                    Third Floor
+                  </a>
+                  <a data-bs-toggle="tab" href="#liton_tab_3_4">
+                    Top Garden
+                  </a>
+                </div>
+              </div>
+              <div className="tab-content">
+                <div className="tab-pane fade" id="liton_tab_3_1">
+                  <div className="ltn__apartments-tab-content-inner">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="apartments-plan-img">
+                          <img
+                            src={publicUrl + "assets/img/others/10.png"}
+                            alt="#"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-5">
+                        <div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
+                          <h2>First Floor</h2>
+                          <p>
+                            Enimad minim veniam quis nostrud exercitation
+                            ullamco laboris. Lorem ipsum dolor sit amet cons
+                            aetetur adipisicing elit sedo eiusmod
+                            tempor.Incididunt labore et dolore magna aliqua. sed
+                            ayd minim veniam.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="product-details-apartments-info-list  section-bg-1">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Total Area</label>{" "}
+                                    <span>2800 Sq. Ft</span>
+                                  </li>
+                                  <li>
+                                    <label>Bedroom</label>{" "}
+                                    <span>150 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Belcony/Pets</label>{" "}
+                                    <span>Allowed</span>
+                                  </li>
+                                  <li>
+                                    <label>Lounge</label>{" "}
+                                    <span>650 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="tab-pane fade active show" id="liton_tab_3_2">
+                  <div className="ltn__product-tab-content-inner">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="apartments-plan-img">
+                          <img
+                            src={publicUrl + "assets/img/others/10.png"}
+                            alt="#"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-5">
+                        <div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
+                          <h2>Second Floor</h2>
+                          <p>
+                            Enimad minim veniam quis nostrud exercitation
+                            ullamco laboris. Lorem ipsum dolor sit amet cons
+                            aetetur adipisicing elit sedo eiusmod
+                            tempor.Incididunt labore et dolore magna aliqua. sed
+                            ayd minim veniam.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="product-details-apartments-info-list  section-bg-1">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Total Area</label>{" "}
+                                    <span>2800 Sq. Ft</span>
+                                  </li>
+                                  <li>
+                                    <label>Bedroom</label>{" "}
+                                    <span>150 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Belcony/Pets</label>{" "}
+                                    <span>Allowed</span>
+                                  </li>
+                                  <li>
+                                    <label>Lounge</label>{" "}
+                                    <span>650 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="tab-pane fade" id="liton_tab_3_3">
+                  <div className="ltn__product-tab-content-inner">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="apartments-plan-img">
+                          <img
+                            src={publicUrl + "assets/img/others/10.png"}
+                            alt="#"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-5">
+                        <div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
+                          <h2>Third Floor</h2>
+                          <p>
+                            Enimad minim veniam quis nostrud exercitation
+                            ullamco laboris. Lorem ipsum dolor sit amet cons
+                            aetetur adipisicing elit sedo eiusmod
+                            tempor.Incididunt labore et dolore magna aliqua. sed
+                            ayd minim veniam.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="product-details-apartments-info-list  section-bg-1">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Total Area</label>{" "}
+                                    <span>2800 Sq. Ft</span>
+                                  </li>
+                                  <li>
+                                    <label>Bedroom</label>{" "}
+                                    <span>150 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Belcony/Pets</label>{" "}
+                                    <span>Allowed</span>
+                                  </li>
+                                  <li>
+                                    <label>Lounge</label>{" "}
+                                    <span>650 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="tab-pane fade" id="liton_tab_3_4">
+                  <div className="ltn__product-tab-content-inner">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="apartments-plan-img">
+                          <img
+                            src={publicUrl + "assets/img/others/10.png"}
+                            alt="#"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-5">
+                        <div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
+                          <h2>Top Garden</h2>
+                          <p>
+                            Enimad minim veniam quis nostrud exercitation
+                            ullamco laboris. Lorem ipsum dolor sit amet cons
+                            aetetur adipisicing elit sedo eiusmod
+                            tempor.Incididunt labore et dolore magna aliqua. sed
+                            ayd minim veniam.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="product-details-apartments-info-list  section-bg-1">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Total Area</label>{" "}
+                                    <span>2800 Sq. Ft</span>
+                                  </li>
+                                  <li>
+                                    <label>Bedroom</label>{" "}
+                                    <span>150 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="apartments-info-list apartments-info-list-color mt-40---">
+                                <ul>
+                                  <li>
+                                    <label>Belcony/Pets</label>{" "}
+                                    <span>Allowed</span>
+                                  </li>
+                                  <li>
+                                    <label>Lounge</label>{" "}
+                                    <span>650 Sq. Ft</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
