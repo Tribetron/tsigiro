@@ -14,6 +14,7 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
+import FeaturesV1 from "../section-components/features-v1";
 
 const PropertyInquiry = () => {
   const [location, setLocation] = useState("");
@@ -139,6 +140,7 @@ const PropertyInquiry = () => {
                   <NotificationContainer />
                 </Card.Body>
               </Card>
+              <FeaturesV1 customClass="ltn__feature-area section-bg-1 mt-20 mb-120---" />
             </div>
           </div>
         </div>
