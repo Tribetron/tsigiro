@@ -199,7 +199,7 @@ class Navbar extends Component {
                             <Link to="/investing">Invest</Link>
                           </li>
                           <li>
-                            <Link to="/property-inquiry">Enquire</Link>
+                            <Link to="/property-inquiry">Request</Link>
                           </li>
                           <li>
                             <Link to="/my-account">My Portfolio</Link>

@@ -55,6 +55,14 @@ function Property({
             <ul>
               <li className="sale-badg">{propertyStatus}</li>
             </ul>
+            <ul>
+              <li
+                className="sale-badg"
+                style={{ fontSize: "11px", color: "orange" }}
+              >
+                <i className="fas fa-star" /> Included In Tsigiro Trust Fund
+              </li>
+            </ul>
           </div>
           <h2 className="product-title go-top">{name}</h2>
           <div className="product-img-location go-top">

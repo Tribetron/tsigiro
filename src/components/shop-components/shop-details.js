@@ -45,6 +45,27 @@ const ShopDetails = (data) => {
               </label>
               <h4 className="title-2">Description</h4>
               <p>{data.data.description}</p>
+              <h4 className="title-2">
+                Benefits Of Being A Tsigiro Trust Fund Member
+              </h4>
+              <ul>
+                <li>Get discounts on your property purchases</li>
+                <li>Get reduced deposit fees</li>
+                <li>Get updates on hottest properties</li>
+              </ul>
+              <Button
+                type="submit"
+                variant="secondary"
+                style={{
+                  marginTop: "5px",
+                  marginBottom: "5px",
+                  backgroundColor: "#47878a",
+                  height: "30%",
+                }}
+              >
+                Become A Member
+              </Button>
+
               <h4 className="title-2">Property Detail</h4>
               <div className="property-detail-info-list section-bg-1 clearfix mb-60">
                 <ul>
@@ -63,7 +84,8 @@ const ShopDetails = (data) => {
                     <label>Baths:</label> <span>{data.data.bathrooms}</span>
                   </li>
                   <li>
-                    <label>Year built:</label> <span>1992</span>
+                    <label>Minimum Deposit:</label>{" "}
+                    <span>USD {currencyFormat(5000)}</span>
                   </li>
                 </ul>
                 <ul>
