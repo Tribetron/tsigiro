@@ -8,9 +8,9 @@ import Footer from './global-components/footer';
 const MyaccountV1 = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="My Account" />
+        {/* <PageHeader headertitle="My Account" /> */}
         <MyAccount />
-        <CallToActionV1 />
+        {/* <CallToActionV1 /> */}
         <Footer />
     </div>
 }
