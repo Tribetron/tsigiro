@@ -12,6 +12,7 @@
     "bootstrap": "^5.2.3",
     "google-maps-react": "^2.0.2",
     "html-react-parser": "^0.10.1",
+    "mdb-react-ui-kit": "^5.1.0",
     "owl.carousel": "^2.3.4",
     "react": "^16.12.0",
     "react-app-rewired": "^2.2.1",
