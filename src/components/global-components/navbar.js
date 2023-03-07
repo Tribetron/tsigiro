@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Social from "../section-components/social";
+import {SelectorConstants} from "./SelectorConstants";
 
 class Navbar extends Component {
   render() {
@@ -247,13 +248,21 @@ class Navbar extends Component {
                         </Link>
                         <ul
                           className="go-top"
-                          style={{
-                            width: 250,
-                            height: 200,
-                            marginTop: 10,
-                            backgroundColor: "#efb951",
-                          }}
-                        ></ul>
+                          style={{width:400,marginTop:10,fontSize:12,backgroundColor:'#fff',borderRadius:10,boxShadow:'0px 0px 10px 0px #0000001a'}}
+                        >
+                           {
+                                SelectorConstants.map((x)=>{
+                                return <li   
+                                onClick={()=>x.redirectURL()}
+                                style={{color:'#000',cursor:'pointer'}}>
+                                            <img src={x.image} style={{width:30,height:30,marginRight:10}}/>
+                                            <p className='hvr-link' style={{margin:0,fontSize:13,fontFamily:'Montserrat',fontWeight:600}}>{x.title}
+                                            <br></br>
+                                            <span style={{fontWeight:400}}>{x.description}</span></p> 
+                                      </li>
+                                })
+                            }
+                        </ul>
                       </li>
                     </ul>
                   </div>
