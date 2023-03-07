@@ -229,17 +229,6 @@ class Navbar extends Component {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <div className="ltn__drop-menu user-menu">
-                                            <ul>
-                                                <li>
-                                                    <Link to="#">
-                                                        <i className="fa-solid fa-comment-dots"></i>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div className="ltn__drop-menu user-menu">
                                         <ul>
                                             <li>
@@ -265,6 +254,17 @@ class Navbar extends Component {
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div>
+                                        <div className="ltn__drop-menu user-menu">
+                                            <ul>
+                                                <li>
+                                                    <Link to="auth/logout">
+                                                        <i className="fa-solid fa-right-from-bracket"></i>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="mobile-menu-toggle d-xl-none">
                                         <a

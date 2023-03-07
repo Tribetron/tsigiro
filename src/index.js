@@ -57,11 +57,22 @@ class Root extends Component {
     render() {
         return (
             <Provider store={store}>
-                <MemoryRouter>
+                <Router>
                     {/* <HashRouter basename="/"> */}
                     <div>
                         <Switch>
+                            <Route exact path="/auth/login" component={() => {
+                                setLoggedInUser(null);
+                                window.location.href = process.env.REACT_APP_AUTH + "?" + encoded(window.location.origin) || '';
+                                return null;
+                            }} />
+                            <Route exact path="/auth/logout" component={() => {
+                                setLoggedInUser(null);
+                                window.location.href = process.env.REACT_APP_AUTH + "?" + encoded("logout") || '';
+                                return null;
+                            }} />
                             <PrivateRoute route={<Route exact path="/" component={HomeV1} />} />
+                            <PrivateRoute route={<Route exact path="/my-account" component={MyAccount} />} />
                             <PrivateRoute route={<Route path="/about" component={About} />} />
                             <PrivateRoute route={<Route path="/service" component={Service} />} />
                             <PrivateRoute route={<Route path="/service-details" component={ServiceDetails} />} />
@@ -93,27 +104,18 @@ class Root extends Component {
                             <PrivateRoute route={<Route path="/contact" component={Contact} />} />
                             <PrivateRoute route={<Route path="/cart" component={Cart} />} />
                             <PrivateRoute route={<Route path="/checkout" component={Checkout} />} />
-                            <PrivateRoute route={<Route path="/my-account" component={MyAccount} />} />
                             <PrivateRoute route={<Route path="/login" component={Login} />} />
                             <PrivateRoute route={<Route path="/register" component={Register} />} />
                             <PrivateRoute route={<Route path="/add-listing" component={AddListing} />} />
                             <PrivateRoute route={<Route path="/wishlist" component={Wishlist} />} />
                             <PrivateRoute route={<Route path="/order-tracking" component={OrderTracking} />} />
                             <PrivateRoute route={<Route path="/history" component={History} />} />
-                            <Route path="/auth/login" component={() => {
-                                setLoggedInUser(null);
-                                window.location.href = process.env.REACT_APP_AUTH + "?" + encoded(window.location.origin) || '';
-                                return null;
-                            }} />
-                            <Route path="/auth/logout" component={() => {
-                                setLoggedInUser(null);
-                                window.location.href = process.env.REACT_APP_AUTH + "?" + encoded("logout") || '';
-                                return null;
-                            }} />
+
+
                         </Switch>
                     </div>
                     {/* </HashRouter> */}
-                </MemoryRouter>
+                </Router>
             </Provider>
         );
     }

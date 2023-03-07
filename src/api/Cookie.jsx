@@ -1,5 +1,6 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
+import {decoded} from './RouteHelpers';
  
 const AUTH_SESSION_KEY = 'hdsdsjlkfhdskjfhdsafsda';
 
@@ -78,17 +79,17 @@ export const getEntityCountry = () => {
 
     
    export const isUserAuthenticated =  () => {
-        // const fromUrl = window.location.href.split('?')[1];
-        // if(fromUrl){
-        // const decodeURL = decoded(fromUrl || '');
-        // const originalURL = fromUrl && JSON.parse(decodeURL);
-        //     if(originalURL.success === true){
-        //         setLoggedInUser(originalURL);
-        //         setGlobalSettings(originalURL.globalSettings[0]);
-        //         setEntityCountry(originalURL.defaultCountry || originalURL.globalSettings[0]?.globalEntityCountries[0]);
-        //     };
-        // };
-        
+        const fromUrl = window.location.href.split('?')[1];
+        if(fromUrl){
+        const decodeURL = decoded(fromUrl || '');
+        const originalURL = fromUrl && JSON.parse(decodeURL);
+            if(originalURL.success === true){
+                setLoggedInUser(originalURL);
+                setGlobalSettings(originalURL.globalSettings[0]);
+                setEntityCountry(originalURL.defaultCountry || originalURL.globalSettings[0]?.globalEntityCountries[0]);
+            };
+        };
+
         const user = getLoggedInUser();
 
         if (!user) {
