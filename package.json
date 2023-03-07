@@ -1,17 +1,18 @@
 {
   "name": "tsigiro",
   "version": "0.1.0",
-  "homepage": "http://localhost:300",
+  "proxy": "http://localhost:3005",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^1.3.2",
+    "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
     "google-maps-react": "^2.0.2",
     "html-react-parser": "^0.10.1",
+    "jwt-decode": "^3.1.2",
     "owl.carousel": "^2.3.4",
     "react": "^16.12.0",
     "react-app-rewired": "^2.2.1",
@@ -29,7 +30,7 @@
     "wowjs": "^1.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "node build.js",
     "complete": "react-app-rewired build",
     "test": "react-app-rewired test",
