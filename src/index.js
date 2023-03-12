@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  MemoryRouter,
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    MemoryRouter,
 } from "react-router-dom";
 import HomeV1 from "./components/home-v1";
 import About from "./components/about";
@@ -45,94 +45,70 @@ import OrderTracking from "./components/order-tracking";
 import History from "./components/history";
 import PropertiesForSale from "./components/for-sale";
 import PropertiesForInvesting from "./components/for-investing";
-import { store } from "./redux/store";
-import { Provider } from "react-redux";
+import {store} from "./redux/store";
+import {Provider} from "react-redux";
 import InvestmentDetails from "./components/shop-components/investment-details";
-import "bootstrap/dist/css/bootstrap.css";
 import PropertyInquiry from "./components/functional-components/PropertyInquiry";
+import PrivateRoute from "./PrivateRoute";
+import {isUserAuthenticated, setLoggedInUser} from "./api/Cookie";
+import {encoded} from "./api/RouteHelpers";
 
 class Root extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <MemoryRouter>
-          {/* <HashRouter basename="/"> */}
-          <div>
-            <Switch>
-              <Route exact path="/" component={HomeV1} />
-              <Route path="/about" component={About} />
-              <Route path="/service" component={Service} />
-              <Route path="/service-details" component={ServiceDetails} />
-              <Route path="/portfolio" component={Portfolio} />
-              <Route path="/portfolio-v2" component={PortfolioV2} />
-              <Route path="/portfolio-details" component={PortfolioDetails} />
-              <Route path="/team" component={Team} />
-              <Route path="/team-details" component={TeamDetails} />
-              <Route path="/faq" component={Faq} />
-              <Route path="/coming-soon" component={ComingSoon} />
-              <Route path="/404" component={Error} />
-              <Route path="/location" component={Location} />
-              <Route path="/shop" component={Shop} />
-              <Route path="/properties" component={PropertiesForSale} />
-              <Route path="/investing" component={PropertiesForInvesting} />
-              <Route path="/shop-grid" component={ShopGrid} />
-              <Route path="/shop-left-sidebar" component={ShopLeftSidebar} />
-              <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
+    render() {
+        return (
+            <Provider store={store}>
+                <MemoryRouter>
+                    {/* <HashRouter basename="/"> */}
+                    <div>
+                        <Switch>
+                            <Route exact path="/" component={HomeV1} />
+                            <Route path="/about" component={About} />
+                            <Route path="/service" component={Service} />
+                            <Route path="/service-details" component={ServiceDetails} />
+                            <Route path="/portfolio" component={Portfolio} />
+                            <Route path="/portfolio-v2" component={PortfolioV2} />
+                            <Route path="/portfolio-details" component={PortfolioDetails} />
+                            <Route path="/team" component={Team} />
+                            <Route path="/team-details" component={TeamDetails} />
+                            <Route path="/faq" component={Faq} />
+                            <Route path="/coming-soon" component={ComingSoon} />
+                            <Route path="/404" component={Error} />
+                            <Route path="/location" component={Location} />
+                            <Route path="/shop" component={Shop} />
+                            <Route path="/properties" component={PropertiesForSale} />
+                            <Route path="/investing" component={PropertiesForInvesting} />
+                            <Route path="/shop-grid" component={ShopGrid} />
+                            <Route path="/shop-left-sidebar" component={ShopLeftSidebar} />
+                            <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
 
-              <Route path="/product-details" component={ProdductDetails} />
-              <Route path="/property-details" component={PropertyDetails} />
-              <Route path="/investment-details" component={InvestmentDetails} />
-              <Route path="/property-inquiry" component={PropertyInquiry} />
-              {/* blog */}
-              <Route path="/blog-grid" component={BlogGrid} />
-              <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
-              <Route path="/blog-right-sidebar" component={BlogRightSidebar} />
-              <Route path="/blog" component={Blog} />
+                            <Route path="/product-details" component={ProdductDetails} />
+                            <Route path="/property-details" component={PropertyDetails} />
+                            <Route path="/investment-details" component={InvestmentDetails} />
+                            <Route path="/property-inquiry" component={PropertyInquiry} />
+                            {/* blog */}
+                            <Route path="/blog-grid" component={BlogGrid} />
+                            <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
+                            <Route path="/blog-right-sidebar" component={BlogRightSidebar} />
+                            <Route path="/blog" component={Blog} />
 
-<<<<<<< HEAD
-                        <Route path="/product-details" component={ ProdductDetails } />
-                        <Route path="/blog-grid" component={ BlogGrid } />
-                        <Route path="/blog-left-sidebar" component={ BlogLeftSidebar } />
-                        <Route path="/blog-right-sidebar" component={ BlogRightSidebar } />
-                        <Route path="/blog" component={ Blog } />
-
-                        <Route path="/blog-details" component={ BlogDetails } />
-                        <Route path="/contact" component={ Contact } />
-                        <Route path="/cart" component={ Cart } />
-                        <Route path="/checkout" component={ Checkout } />
-                        <Route path="/my-account" component={ MyAccount } />
-                        <Route path="/login" component={ Login } />
-                        <Route path="/register" component={ Register } />
-                        <Route path="/add-listing" component={ AddListing } />
-                        <Route path="/wishlist" component={ Wishlist } />
-                        <Route path="/order-tracking" component={ OrderTracking } />
-                        <Route path="/history" component={ History } />
-	                </Switch>
-	                </div>
-                {/* </HashRouter> */}
-            </MemoryRouter>
-        )
+                            <Route path="/blog-details" component={BlogDetails} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/cart" component={Cart} />
+                            <Route path="/checkout" component={Checkout} />
+                            <Route path="/my-account" component={MyAccount} />
+                            <Route path="/login" component={Login} />
+                            <Route path="/register" component={Register} />
+                            <Route path="/add-listing" component={AddListing} />
+                            <Route path="/wishlist" component={Wishlist} />
+                            <Route path="/order-tracking" component={OrderTracking} />
+                            <Route path="/history" component={History} />
+                        </Switch>
+                    </div>
+                    {/* </HashRouter> */}
+                </MemoryRouter>
+            </Provider>
+        );
     }
-=======
-              <Route path="/blog-details" component={BlogDetails} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/cart" component={Cart} />
-              <Route path="/checkout" component={Checkout} />
-              <Route path="/my-account" component={MyAccount} />
-              <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
-              <Route path="/add-listing" component={AddListing} />
-              <Route path="/wishlist" component={Wishlist} />
-              <Route path="/order-tracking" component={OrderTracking} />
-              <Route path="/history" component={History} />
-            </Switch>
-          </div>
-          {/* </HashRouter> */}
-        </MemoryRouter>
-      </Provider>
-    );
-  }
->>>>>>> origin/XR-33
 }
 
 export default Root;

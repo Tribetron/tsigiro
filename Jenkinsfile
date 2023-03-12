@@ -1,6 +1,7 @@
 pipeline {
+
     agent any
-    
+
     environment {
         AWS_ACCESS_KEY_ID     = credentials('aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
@@ -13,7 +14,6 @@ pipeline {
     }
     
     tools {nodejs "NODEJS"} // NodeJS v16.13.2
-
 
     stages {
     

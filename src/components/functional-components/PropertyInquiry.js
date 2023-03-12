@@ -40,7 +40,74 @@ const PropertyInquiry = () => {
               <Card>
                 <Card.Header>REQUEST FOR PROPERTY</Card.Header>
                 <Card.Body>
-                  <Form onSubmit={FormSubmit}>
+                  <form className="ltn__car-dealer-form-box row">
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
+                      <select className="nice-select">
+                        <option>Harare</option>
+                        <option>Mashonaland West</option>
+                        <option>Mashonaland East</option>
+                        <option>Manicaland</option>
+                        <option>Masvingo</option>
+                        <option>Matebeleland North</option>
+                        <option>Matebeleland South</option>
+                      </select>
+                    </div>
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
+                      <select className="nice-select">
+                        <option>Property Type</option>
+                        <option>Apartment</option>
+                        <option>Commercial Property</option>
+                        <option>Garden Flats</option>
+                        <option>Single Family Home</option>
+                      </select>
+                    </div>
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
+                      <select className="nice-select">
+                        <option>Bedrooms</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+                      <div className="input-item input-item-name ltn__custom-icon">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Min size (in sqm)"
+                        />
+                      </div>
+                    </div>
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+                      <div className="input-item input-item-name ltn__custom-icon">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Max size (in sqm)"
+                        />
+                      </div>
+                    </div>
+                    <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+                      <div className="input-item input-item-name ltn__custom-icon">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Min price (in USD)"
+                        />
+                      </div>
+                    </div>
+                    <div className="btn-wrapper text-center go-top">
+                      {/* <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> */}
+                      <Link
+                        to="/investing"
+                        className="btn theme-btn-1 btn-effect-1 text-uppercase"
+                      >
+                        Send Request
+                      </Link>
+                    </div>
+                  </form>
+                  {/* <Form onSubmit={FormSubmit} className="">
                     <Form.Group
                       className="mb-5"
                       controlId="exampleForm.ControlInput1"
@@ -115,32 +182,17 @@ const PropertyInquiry = () => {
                         required
                       />
                     </Form.Group>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput5"
-                    >
-                      <Form.Label>Preferred Payment Timeline*</Form.Label>
-                      <Form.Control
-                        type="date"
-                        value={timeline}
-                        autoFocus
-                        onChange={(e) => {
-                          setTimeline(e.target.value);
-                        }}
-                        required
-                      />
-                    </Form.Group>
+                  
                     <Button
                       style={{ backgroundColor: "#47878a" }}
                       type="submit"
                     >
                       Send Inquiry
                     </Button>
-                  </Form>
+                  </Form> */}
                   <NotificationContainer />
                 </Card.Body>
               </Card>
-              <FeaturesV1 customClass="ltn__feature-area section-bg-1 mt-20 mb-120---" />
             </div>
           </div>
         </div>

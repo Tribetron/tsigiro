@@ -987,6 +987,7 @@ fieldset legend {
     input and button type focus outline disable
 ---------------------------------------------------- */
 input[type="text"]:focus,
+input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
@@ -1012,6 +1013,7 @@ code {
     Form input box
 ---------------------------------------------------- */
 input[type="text"],
+input[type="date"],
 input[type="email"],
 input[type="password"],
 input[type="submit"],
@@ -15918,23 +15920,23 @@ input.cart-plus-minus-box {
 .ltn__car-dealer-form-box
   .ltn__custom-icon.ltn__icon-calendar
   .nice-select::before {
-  content: "\f073";
+  content: "\f015";
 }
 
 .ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-car .nice-select::before {
-  content: "\f1b9";
+  content: "\f3c5";
 }
 
 .ltn__car-dealer-form-box
   .ltn__custom-icon.ltn__icon-meter
   .nice-select::before {
-  content: "\f3fd";
+  content: "\f124";
 }
 
 .ltn__car-dealer-form-box
   .ltn__custom-icon.ltn__icon-ring
   .nice-select::before {
-  content: "\f1cd";
+  content: "\f236";
 }
 
 .ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-cog .nice-select::before {

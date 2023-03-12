@@ -1,61 +1,62 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import Social from "../section-components/social";
+import {SelectorConstants} from "./SelectorConstants";
 
 class Navbar extends Component {
-  render() {
-    let publicUrl = process.env.PUBLIC_URL + "/";
-    return (
-      <div>
-        <header className="ltn__header-area ltn__header-5 ltn__header-transparent--- gradient-color-4---">
-          <div className="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white">
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <div className="site-logo-wrap">
-                    <div className="site-logo go-top">
-                      <Link to="/">
-                        <img
-                          src={publicUrl + "assets/img/logo.png"}
-                          style={{ width: "50px" }}
-                          alt="Logo"
-                        />
-                      </Link>
-                    </div>
-                    <div className="get-support clearfix d-none">
-                      <div className="get-support-icon">
-                        <i className="icon-call" />
-                      </div>
-                      <div className="get-support-info">
-                        <h6>Get Support</h6>
-                        <h4>
-                          <a href="tel:+123456789">123-456-789-10</a>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col header-menu-column">
-                  <div className="header-menu d-none d-xl-block">
-                    <nav>
-                      <div className="ltn__main-menu go-top">
-                        <ul>
-                          {/* <li>
+    render() {
+        let publicUrl = process.env.PUBLIC_URL + "/";
+        return (
+            <div>
+                <header className="ltn__header-area ltn__header-5 ltn__header-transparent--- gradient-color-4---">
+                    <div className="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <div className="site-logo-wrap">
+                                        <div className="site-logo go-top">
+                                            <Link to="/">
+                                                <img
+                                                    src={publicUrl + "assets/img/logo.png"}
+                                                    style={{width: "50px"}}
+                                                    alt="Logo"
+                                                />
+                                            </Link>
+                                        </div>
+                                        <div className="get-support clearfix d-none">
+                                            <div className="get-support-icon">
+                                                <i className="icon-call" />
+                                            </div>
+                                            <div className="get-support-info">
+                                                <h6>Get Support</h6>
+                                                <h4>
+                                                    <a href="tel:+123456789">123-456-789-10</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col header-menu-column">
+                                    <div className="header-menu d-none d-xl-block">
+                                        <nav>
+                                            <div className="ltn__main-menu go-top">
+                                                <ul>
+                                                    {/* <li>
                             <Link to="/">Home</Link>
                           </li> */}
-                          {/* <li>
+                                                    {/* <li>
                             <Link to="/about">About Us</Link>
                           </li> */}
-                          {/* <li>
+                                                    {/* <li>
                             <Link to="/properties">For Sale</Link>
                           </li>
                           <li>
                             <Link to="/investing">For investing</Link>
                           </li> */}
-                          {/* <li className="menu-icon">
+                                                    {/* <li className="menu-icon">
                             <Link to="/blog-grid">News</Link>
                           </li> */}
-                          {/* <li className="menu-icon">
+                                                    {/* <li className="menu-icon">
                             <Link to="#">Pages</Link>
                             <ul className="mega-menu">
                               <li>
@@ -152,161 +153,157 @@ class Navbar extends Component {
                               </li>
                             </ul>
                           </li> */}
-                          {/* <li>
+                                                    {/* <li>
                             <Link to="/contact">Contact Us</Link>
                           </li> */}
-                        </ul>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-                <div className="col ltn__header-options ltn__header-options-2 mb-sm-20">
-                  {/* header-search-1 */}
-                  <div className="header-search-wrap">
-                    <div className="header-search-1">
-                      <div className="search-icon">
-                        <i className="icon-search for-search-show" />
-                        <i className="icon-cancel  for-search-close" />
-                      </div>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div className="col ltn__header-options ltn__header-options-2 mb-sm-20">
+                                    {/* header-search-1 */}
+                                    <div className="header-search-wrap">
+                                        <div className="header-search-1">
+                                            <div className="search-icon">
+                                                <i className="icon-search for-search-show" />
+                                                <i className="icon-cancel  for-search-close" />
+                                            </div>
+                                        </div>
+                                        <div className="header-search-1-form">
+                                            <form id="#" method="get" action="#">
+                                                <input
+                                                    type="text"
+                                                    name="search"
+                                                    placeholder="Search for by location, address, zip, etc."
+                                                />
+                                                <button type="submit">
+                                                    <span>
+                                                        <i className="icon-search" />
+                                                    </span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    {/* user-menu */}
+                                    <div className="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+                                                <Link to="#">
+                                                    <i className="fas fa-home" />
+                                                </Link>
+                                                <ul className="go-top">
+                                                    <li>
+                                                        <Link to="/properties">Buy</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/investing">Invest</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/property-inquiry">Request</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/my-account">My Portfolio</Link>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+                                                <Link to="#">
+                                                    <i
+                                                        className="fa-sharp fa-regular fa-earth-africa"
+                                                        style={{color: "#efb951"}}
+                                                    ></i>
+                                                </Link>
+                                                <ul className="go-top">
+                                                    <li>
+                                                        <Link to="/">Zimbabwe</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/">South Africa</Link>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+                                                <Link to="#">
+                                                    <i className="fa-solid fa-grip"></i>
+                                                </Link>
+                                                <ul
+                                                    className="go-top"
+                                                    style={{width: 400, marginTop: 10, fontSize: 12, backgroundColor: '#fff', borderRadius: 10, boxShadow: '0px 0px 10px 0px #0000001a'}}
+                                                >
+                                                    {
+                                                        SelectorConstants.map((x) => {
+                                                            return <li
+                                                                onClick={() => x.redirectURL()}
+                                                                style={{color: '#000', cursor: 'pointer'}}>
+                                                                <img src={x.image} style={{width: 30, height: 30, marginRight: 10}} />
+                                                                <p className='hvr-link' style={{margin: 0, fontSize: 13, fontFamily: 'Montserrat', fontWeight: 600}}>{x.title}
+                                                                    <br></br>
+                                                                    <span style={{fontWeight: 400}}>{x.description}</span></p>
+                                                            </li>
+                                                        })
+                                                    }
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div className="ltn__drop-menu user-menu">
+                                            <ul>
+                                                <li>
+                                                    <Link to="auth/logout">
+                                                        <i className="fa-solid fa-right-from-bracket"></i>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="mobile-menu-toggle d-xl-none">
+                                        <a
+                                            href="#ltn__utilize-mobile-menu"
+                                            className="ltn__utilize-toggle"
+                                        >
+                                            <svg viewBox="0 0 800 600">
+                                                <path
+                                                    d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                                                    id="top"
+                                                />
+                                                <path d="M300,320 L540,320" id="middle" />
+                                                <path
+                                                    d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                                                    id="bottom"
+                                                    transform="translate(480, 320) scale(1, -1) translate(-480, -318) "
+                                                />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="header-search-1-form">
-                      <form id="#" method="get" action="#">
-                        <input
-                          type="text"
-                          name="search"
-                          placeholder="Search for by location, address, zip, etc."
-                        />
-                        <button type="submit">
-                          <span>
-                            <i className="icon-search" />
-                          </span>
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                  {/* user-menu */}
-                  <div className="ltn__drop-menu user-menu">
-                    <ul>
-                      <li>
-                        <Link to="#">
-                          <i className="fas fa-home" />
-                        </Link>
-                        <ul className="go-top">
-                          <li>
-                            <Link to="/properties">Buy</Link>
-                          </li>
-                          <li>
-                            <Link to="/investing">Invest</Link>
-                          </li>
-                          <li>
-                            <Link to="/property-inquiry">Enquire</Link>
-                          </li>
-                          <li>
-                            <Link to="/my-account">My Portfolio</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="ltn__drop-menu user-menu">
-                    <ul>
-                      <li>
-                        <Link to="#">
-                          <i
-                            className="fa-sharp fa-regular fa-earth-africa"
-                            style={{ color: "#efb951" }}
-                          ></i>
-                        </Link>
-                        <ul className="go-top">
-                          <li>
-                            <Link to="/">Zimbabwe</Link>
-                          </li>
-                          <li>
-                            <Link to="/">South Africa</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <div className="ltn__drop-menu user-menu">
-                      <ul>
-                        <li>
-                          <Link to="#">
-                            <i className="fa-solid fa-comment-dots"></i>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="ltn__drop-menu user-menu">
-                    <ul>
-                      <li>
-                        <Link to="#">
-                          <i className="fa-solid fa-grip"></i>
-                        </Link>
-                        <ul
-                          className="go-top"
-                          style={{
-                            width: 250,
-                            height: 200,
-                            marginTop: 10,
-                            backgroundColor: "#efb951",
-                          }}
-                        ></ul>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* mini-cart */}
-                  {/* <div className="mini-cart-icon">
-                    <a
-                      href="#ltn__utilize-cart-menu"
-                      className="ltn__utilize-toggle"
-                    >
-                      <i className="icon-shopping-cart"></i>
-                      <sup>2</sup>
-                    </a>
-                  </div> */}
-                  {/* mini-cart */}
-                  {/* Mobile Menu Button */}
-                  <div className="mobile-menu-toggle d-xl-none">
-                    <a
-                      href="#ltn__utilize-mobile-menu"
-                      className="ltn__utilize-toggle"
-                    >
-                      <svg viewBox="0 0 800 600">
-                        <path
-                          d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
-                          id="top"
-                        />
-                        <path d="M300,320 L540,320" id="middle" />
-                        <path
-                          d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
-                          id="bottom"
-                          transform="translate(480, 320) scale(1, -1) translate(-480, -318) "
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <div
-          id="ltn__utilize-mobile-menu"
-          className="ltn__utilize ltn__utilize-mobile-menu"
-        >
-          <div className="ltn__utilize-menu-inner ltn__scrollbar">
-            <div className="ltn__utilize-menu-head">
-              <div className="site-logo">
-                <Link to="/">
-                  <img src={publicUrl + "assets/img/logo.png"} alt="Logo" />
-                </Link>
-              </div>
-              <button className="ltn__utilize-close">×</button>
-            </div>
-            {/* <div className="ltn__utilize-menu-search-form">
+                </header>
+                <div
+                    id="ltn__utilize-mobile-menu"
+                    className="ltn__utilize ltn__utilize-mobile-menu"
+                >
+                    <div className="ltn__utilize-menu-inner ltn__scrollbar">
+                        <div className="ltn__utilize-menu-head">
+                            <div className="site-logo">
+                                <Link to="/">
+                                    <img src={publicUrl + "assets/img/logo.png"} alt="Logo" />
+                                </Link>
+                            </div>
+                            <button className="ltn__utilize-close">×</button>
+                        </div>
+                        {/* <div className="ltn__utilize-menu-search-form">
               <form action={"#"}>
                 <input type="text" placeholder="Search..." />
                 <button>
@@ -499,7 +496,7 @@ class Navbar extends Component {
                 </li>
               </ul>
             </div> */}
-            {/* <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
+                        {/* <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
               <ul>
                 <li>
                   <Link to="/my-account" title="My Account">
@@ -529,7 +526,7 @@ class Navbar extends Component {
                 </li>
               </ul>
             </div> */}
-            {/* <div className="ltn__social-media-2">
+                        {/* <div className="ltn__social-media-2">
               <ul>
                 <li>
                   <a href="#" title="Facebook">
@@ -553,11 +550,11 @@ class Navbar extends Component {
                 </li>
               </ul>
             </div> */}
-          </div>
-        </div>
+                    </div>
+                </div>
 
-        {/* Utilize Cart Menu Start */}
-        {/* <div
+                {/* Utilize Cart Menu Start */}
+                {/* <div
           id="ltn__utilize-cart-menu"
           className="ltn__utilize ltn__utilize-cart-menu"
         >
@@ -661,10 +658,10 @@ class Navbar extends Component {
               <p>Free Shipping on All Orders Over $100!</p>
             </div>
           </div> */}
-        {/* </div> */}
-      </div>
-    );
-  }
+                {/* </div> */}
+            </div>
+        );
+    }
 }
 
 export default Navbar;
