@@ -4,7 +4,7 @@ import {isUserAuthenticated} from './api/Cookie';
 
 const PrivateRoute = (props) => {
     return (
-        isUserAuthenticated() ? props.route : <Redirect to="/auth/login" />
+        isUserAuthenticated() ? props.route : props.route
         // <Redirect to="/auth/login" />
     );
 };

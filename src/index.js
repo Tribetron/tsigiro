@@ -50,10 +50,17 @@ import {Provider} from "react-redux";
 import InvestmentDetails from "./components/shop-components/investment-details";
 import PropertyInquiry from "./components/functional-components/PropertyInquiry";
 import PrivateRoute from "./PrivateRoute";
-import {setLoggedInUser} from "./api/Cookie";
+import {isUserAuthenticated, setLoggedInUser} from "./api/Cookie";
 import {encoded} from "./api/RouteHelpers";
 
 class Root extends Component {
+
+    componentDidMount() {
+        if (!isUserAuthenticated()) {
+            window.location.href = process.env.REACT_APP_AUTH + "?" + encoded(window.location.origin) || '';
+        }
+    }
+
     render() {
         return (
             <Provider store={store}>
@@ -71,45 +78,45 @@ class Root extends Component {
                                 window.location.href = process.env.REACT_APP_AUTH + "?" + encoded("logout") || '';
                                 return null;
                             }} />
-                            <PrivateRoute route={<Route exact path="/" component={HomeV1} />} />
-                            <PrivateRoute route={<Route exact path="/my-account" component={MyAccount} />} />
-                            <PrivateRoute route={<Route path="/about" component={About} />} />
-                            <PrivateRoute route={<Route path="/service" component={Service} />} />
-                            <PrivateRoute route={<Route path="/service-details" component={ServiceDetails} />} />
-                            <PrivateRoute route={<Route path="/portfolio" component={Portfolio} />} />
-                            <PrivateRoute route={<Route path="/portfolio-v2" component={PortfolioV2} />} />
-                            <PrivateRoute route={<Route path="/portfolio-details" component={PortfolioDetails} />} />
-                            <PrivateRoute route={<Route path="/team" component={Team} />} />
-                            <PrivateRoute route={<Route path="/team-details" component={TeamDetails} />} />
-                            <PrivateRoute route={<Route path="/faq" component={Faq} />} />
-                            <PrivateRoute route={<Route path="/coming-soon" component={ComingSoon} />} />
-                            <PrivateRoute route={<Route path="/coming-soon" component={ComingSoon} />} />
+                            <Route exact path="/" component={PropertiesForSale} />
+                            <Route exact path="/my-account" component={MyAccount} />
+                            <Route path="/about" component={About} />
+                            <Route path="/service" component={Service} />
+                            <Route path="/service-details" component={ServiceDetails} />
+                            <Route path="/portfolio" component={Portfolio} />
+                            <Route path="/portfolio-v2" component={PortfolioV2} />
+                            <Route path="/portfolio-details" component={PortfolioDetails} />
+                            <Route path="/team" component={Team} />
+                            <Route path="/team-details" component={TeamDetails} />
+                            <Route path="/faq" component={Faq} />
+                            <Route path="/coming-soon" component={ComingSoon} />
+                            <Route path="/coming-soon" component={ComingSoon} />
                             <Route path="/404" component={Error} />
-                            <PrivateRoute route={<Route path="/location" component={Location} />} />
-                            <PrivateRoute route={<Route path="/shop" component={Shop} />} />
-                            <PrivateRoute route={<Route path="/properties" component={PropertiesForSale} />} />
-                            <PrivateRoute route={<Route path="/investing" component={PropertiesForInvesting} />} />
-                            <PrivateRoute route={<Route path="/shop-grid" component={ShopGrid} />} />
-                            <PrivateRoute route={<Route path="/shop-left-sidebar" component={ShopLeftSidebar} />} />
-                            <PrivateRoute route={<Route path="/shop-right-sidebar" component={ShopRightSidebar} />} />
-                            <PrivateRoute route={<Route path="/product-details" component={ProdductDetails} />} />
-                            <PrivateRoute route={<Route path="/property-details" component={PropertyDetails} />} />
-                            <PrivateRoute route={<Route path="/investment-details" component={InvestmentDetails} />} />
-                            <PrivateRoute route={<Route path="/property-inquiry" component={PropertyInquiry} />} />
-                            <PrivateRoute route={<Route path="/blog-grid" component={BlogGrid} />} />
-                            <PrivateRoute route={<Route path="/blog-left-sidebar" component={BlogLeftSidebar} />} />
-                            <PrivateRoute route={<Route path="/blog-right-sidebar" component={BlogRightSidebar} />} />
-                            <PrivateRoute route={<Route path="/blog" component={Blog} />} />
-                            <PrivateRoute route={<Route path="/blog-details" component={BlogDetails} />} />
-                            <PrivateRoute route={<Route path="/contact" component={Contact} />} />
-                            <PrivateRoute route={<Route path="/cart" component={Cart} />} />
-                            <PrivateRoute route={<Route path="/checkout" component={Checkout} />} />
-                            <PrivateRoute route={<Route path="/login" component={Login} />} />
-                            <PrivateRoute route={<Route path="/register" component={Register} />} />
-                            <PrivateRoute route={<Route path="/add-listing" component={AddListing} />} />
-                            <PrivateRoute route={<Route path="/wishlist" component={Wishlist} />} />
-                            <PrivateRoute route={<Route path="/order-tracking" component={OrderTracking} />} />
-                            <PrivateRoute route={<Route path="/history" component={History} />} />
+                            <Route path="/location" component={Location} />
+                            <Route path="/shop" component={Shop} />
+                            <Route path="/properties" component={PropertiesForSale} />
+                            <Route exact path="/investing" component={PropertiesForInvesting} />
+                            <Route path="/shop-grid" component={ShopGrid} />
+                            <Route path="/shop-left-sidebar" component={ShopLeftSidebar} />
+                            <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
+                            <Route path="/product-details" component={ProdductDetails} />
+                            <Route path="/property-details" component={PropertyDetails} />
+                            <Route path="/investment-details" component={InvestmentDetails} />
+                            <Route path="/property-inquiry" component={PropertyInquiry} />
+                            <Route path="/blog-grid" component={BlogGrid} />
+                            <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
+                            <Route path="/blog-right-sidebar" component={BlogRightSidebar} />
+                            <Route path="/blog" component={Blog} />
+                            <Route path="/blog-details" component={BlogDetails} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/cart" component={Cart} />
+                            <Route path="/checkout" component={Checkout} />
+                            <Route path="/login" component={Login} />
+                            <Route path="/register" component={Register} />
+                            <Route path="/add-listing" component={AddListing} />
+                            <Route path="/wishlist" component={Wishlist} />
+                            <Route path="/order-tracking" component={OrderTracking} />
+                            <Route path="/history" component={History} />
 
 
                         </Switch>
