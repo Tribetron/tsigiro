@@ -135,3 +135,53 @@ export const encoded = (str) => {
 export const decoded = (str) => {
     return Base64.decode(str);
 }
+
+export const queryAdjuster = (str)=>{
+    const queryParams = str.split('?')[1];
+    let query = "";
+
+    if(queryParams){
+    const decod = JSON.parse('{"' + decodeURI(queryParams.replace(/&/g, "\",\"").replace(/=/g, "\":\"")) + '"}');
+    if(decod.price){
+      decod.price = decod.price.replace(/%24/g, "").replace(/\+/g, "");
+    }
+
+    const entries  = Object.keys(decod);
+    entries.map((x)=>{
+        if(decod[x] === "null" || !decod[x]){
+            delete decod[x];
+        }else{
+            if(x ==="price"){
+               const prices = decod[x].split("-");
+               decod[x] =  JSON.stringify({$gte:parseInt(prices[0]), $lte:parseInt(prices[1])});
+            }
+            if(x === "minSize" && decod.maxSize  ){
+               decod.area = JSON.stringify({$gte:parseInt(decod.minSize), $lte:parseInt(decod.maxSize)});
+               query += "&area" + "="+decod.area;
+            }
+            query += "&"+x + "="+decod[x];
+        };
+    })
+    query = query.replace("&","");
+    }
+
+    return query;
+}
+
+export const fixPricing =(str)=>{
+        const repld = str.replace( /\s/g, '').replace( /\$/g, '')
+        const prices = repld.split("-");
+        return prices;
+}
+
+
+export const queryPageAdjuster = (str)=>{
+    const queryParams = str.split('?')[1];
+    let  decod = {};
+
+    if(queryParams){
+     decod = JSON.parse('{"' + decodeURI(queryParams.replace(/&/g, "\",\"").replace(/=/g, "\":\"")) + '"}');
+    }
+    console.log(decod);
+    return  decod;
+}

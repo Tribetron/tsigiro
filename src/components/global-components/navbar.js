@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import {setLoggedInUser} from "../../api/Cookie";
+import {decoded, encoded} from "../../api/RouteHelpers";
 import Social from "../section-components/social";
 import {SelectorConstants} from "./SelectorConstants";
 
@@ -18,7 +20,7 @@ class Navbar extends Component {
                                             <Link to="/">
                                                 <img
                                                     src={publicUrl + "assets/img/logo.png"}
-                                                    style={{width: "50px"}}
+                                                    style={{width: "250px"}}
                                                     alt="Logo"
                                                 />
                                             </Link>
@@ -41,174 +43,31 @@ class Navbar extends Component {
                                         <nav>
                                             <div className="ltn__main-menu go-top">
                                                 <ul>
+                                                    <li>
+                                                        <Link to="/properties">Propert Sales</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/investing">Property Investments</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/property-inquiry">My Requests</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/property-inquiry">My Purchases</Link>
+                                                    </li>
+                                                    <li className="menu-icon">
+                                                        <Link to="/blog-grid">My Investments</Link>
+                                                    </li>
                                                     {/* <li>
-                            <Link to="/">Home</Link>
-                          </li> */}
-                                                    {/* <li>
-                            <Link to="/about">About Us</Link>
-                          </li> */}
-                                                    {/* <li>
-                            <Link to="/properties">For Sale</Link>
-                          </li>
-                          <li>
-                            <Link to="/investing">For investing</Link>
-                          </li> */}
-                                                    {/* <li className="menu-icon">
-                            <Link to="/blog-grid">News</Link>
-                          </li> */}
-                                                    {/* <li className="menu-icon">
-                            <Link to="#">Pages</Link>
-                            <ul className="mega-menu">
-                              <li>
-                                <a href="#">Inner Pages</a>
-                                <ul>
-                                  <li>
-                                    <Link to="/portfolio">Portfolio</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/portfolio-v2">
-                                      Portfolio - 02
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/portfolio-details">
-                                      Portfolio Details
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/team">Team</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/team-details">Team Details</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/faq">FAQ</Link>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <Link to="#">Inner Pages</Link>
-                                <ul>
-                                  <li>
-                                    <Link to="/history">History</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/add-listing">Add Listing</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/location">
-                                      Google Map Locations
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/404">404</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/contact">Contact</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/coming-soon">Coming Soon</Link>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <Link to="#">Shop Pages</Link>
-                                <ul>
-                                  <li>
-                                    <Link to="/shop">Shop</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/shop-left-sidebar">
-                                      Shop Left sidebar
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/shop-right-sidebar">
-                                      Shop right sidebar
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/shop-grid">Shop Grid</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/product-details">
-                                      Shop details{" "}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/cart">Cart</Link>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <Link to="/shop">
-                                  <img
-                                    src={
-                                      publicUrl +
-                                      "assets/img/banner/menu-banner-1.jpg"
-                                    }
-                                    alt="#"
-                                  />
-                                </Link>
-                              </li>
-                            </ul>
-                          </li> */}
-                                                    {/* <li>
-                            <Link to="/contact">Contact Us</Link>
-                          </li> */}
+                                                    <Link to="/contact">Contact Us</Link>
+                                                </li> */}
                                                 </ul>
                                             </div>
                                         </nav>
                                     </div>
                                 </div>
                                 <div className="col ltn__header-options ltn__header-options-2 mb-sm-20">
-                                    {/* header-search-1 */}
-                                    <div className="header-search-wrap">
-                                        <div className="header-search-1">
-                                            <div className="search-icon">
-                                                <i className="icon-search for-search-show" />
-                                                <i className="icon-cancel  for-search-close" />
-                                            </div>
-                                        </div>
-                                        <div className="header-search-1-form">
-                                            <form id="#" method="get" action="#">
-                                                <input
-                                                    type="text"
-                                                    name="search"
-                                                    placeholder="Search for by location, address, zip, etc."
-                                                />
-                                                <button type="submit">
-                                                    <span>
-                                                        <i className="icon-search" />
-                                                    </span>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    {/* user-menu */}
-                                    <div className="ltn__drop-menu user-menu">
-                                        <ul>
-                                            <li>
-                                                <Link to="#">
-                                                    <i className="fas fa-home" />
-                                                </Link>
-                                                <ul className="go-top">
-                                                    <li>
-                                                        <Link to="/properties">Buy</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/investing">Invest</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/property-inquiry">Request</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/my-account">My Portfolio</Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
+
                                     <div className="ltn__drop-menu user-menu">
                                         <ul>
                                             <li>
@@ -255,16 +114,33 @@ class Navbar extends Component {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <div className="ltn__drop-menu user-menu">
-                                            <ul>
-                                                <li>
-                                                    <Link to="auth/logout">
-                                                        <i className="fa-solid fa-right-from-bracket"></i>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <div className="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+                                                <Link to="#">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </Link>
+                                                <ul className="go-top" style={{marginTop: 10}}>
+                                                    <li
+                                                        onClick={() => {
+                                                            window.location.href = process.env.REACT_APP_AUTH;
+                                                        }}
+                                                    >
+                                                        <Link to="/"
+
+                                                        >My Account</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            onClick={() => {
+                                                                window.location.href = process.env.REACT_APP_AUTH + "?" + encoded("logout") || '';
+                                                                setLoggedInUser(null);
+                                                            }}
+                                                            to="/">logout</Link>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div className="mobile-menu-toggle d-xl-none">
                                         <a

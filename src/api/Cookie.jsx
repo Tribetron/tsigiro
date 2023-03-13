@@ -79,15 +79,20 @@ export const getEntityCountry = () => {
 
     
    export const isUserAuthenticated =  () => {
+       
+
         const fromUrl = window.location.href.split('?')[1];
+
         if(fromUrl){
         const decodeURL = decoded(fromUrl || '');
-        const originalURL = fromUrl && JSON.parse(decodeURL);
+        if(decodeURL.includes("token")){
+             const originalURL = fromUrl && JSON.parse(decodeURL);
             if(originalURL.success === true){
                 setLoggedInUser(originalURL);
                 setGlobalSettings(originalURL.globalSettings[0]);
                 setEntityCountry(originalURL.defaultCountry || originalURL.globalSettings[0]?.globalEntityCountries[0]);
             };
+         }
         };
 
         const user = getLoggedInUser();
@@ -95,6 +100,7 @@ export const getEntityCountry = () => {
         if (!user) {
             return false;
         }
+
         const decodeds = jwtDecode(user.token);
         const currentTime = Date.now() / 1000;
         if (decodeds.exp < currentTime) {

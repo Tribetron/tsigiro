@@ -236,8 +236,8 @@ font-family: 'Poppins', sans-serif;
   /* Lighten */
   --ltn__heading-color: #071c1f;
   --ltn__paragraph-color: #5c727d;
-  --ltn__heading-font: "Poppins", sans-serif;
-  --ltn__body-font: "Nunito Sans", sans-serif;
+  --ltn__heading-font: "Montserrat", sans-serif;
+  --ltn__body-font: "Montserrat";
   /* Footer ACD2D8 8CB2B2  */
   --ltn__color-1: #8cb2b2;
   --ltn__color-2: #acd2d8;
@@ -5345,7 +5345,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .ltn__main-menu > ul > li > a {
-  font-size: 18px;
+  font-size: 13px;
   padding: 20px 10px;
   display: inline-block;
   white-space: nowrap;
@@ -9487,6 +9487,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   color: var(--ltn__heading-color);
   background-color: var(--section-bg-1);
   font-weight: 700;
+  font-size: 13px;
 }
 .ltn__gallery-filter-menu button:last-child,
 .ltn__tab-menu a:last-child {
@@ -17836,7 +17837,7 @@ input.cart-plus-minus-box {
 .btn {
   border-radius: 0;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   font-family: var(--ltn__heading-font);
   padding: 17px 40px;

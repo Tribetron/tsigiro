@@ -52,65 +52,75 @@ import PropertyInquiry from "./components/functional-components/PropertyInquiry"
 import PrivateRoute from "./PrivateRoute";
 import {isUserAuthenticated, setLoggedInUser} from "./api/Cookie";
 import {encoded} from "./api/RouteHelpers";
+import {QueryClient, QueryClientProvider} from 'react-query'
 
 class Root extends Component {
     render() {
         return (
             <Provider store={store}>
-                <MemoryRouter>
-                    {/* <HashRouter basename="/"> */}
+                <Router>
                     <div>
                         <Switch>
-                            <Route exact path="/" component={HomeV1} />
-                            <Route path="/about" component={About} />
-                            <Route path="/service" component={Service} />
-                            <Route path="/service-details" component={ServiceDetails} />
-                            <Route path="/portfolio" component={Portfolio} />
-                            <Route path="/portfolio-v2" component={PortfolioV2} />
-                            <Route path="/portfolio-details" component={PortfolioDetails} />
-                            <Route path="/team" component={Team} />
-                            <Route path="/team-details" component={TeamDetails} />
-                            <Route path="/faq" component={Faq} />
-                            <Route path="/coming-soon" component={ComingSoon} />
-                            <Route path="/404" component={Error} />
-                            <Route path="/location" component={Location} />
-                            <Route path="/shop" component={Shop} />
-                            <Route path="/properties" component={PropertiesForSale} />
-                            <Route path="/investing" component={PropertiesForInvesting} />
-                            <Route path="/shop-grid" component={ShopGrid} />
-                            <Route path="/shop-left-sidebar" component={ShopLeftSidebar} />
-                            <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
+                            <PrivateRoute>
+                                <Route exact path="/" component={HomeV1} />
+                                <Route exact path="/about" component={About} />
+                                <Route path="/property-request-success" component={Service} />
+                                <Route path="/service-details" component={ServiceDetails} />
+                                <Route path="/portfolio" component={Portfolio} />
+                                <Route path="/portfolio-v2" component={PortfolioV2} />
+                                <Route path="/portfolio-details" component={PortfolioDetails} />
+                                <Route path="/team" component={Team} />
+                                <Route path="/team-details" component={TeamDetails} />
+                                <Route path="/faq" component={Faq} />
+                                <Route path="/coming-soon" component={ComingSoon} />
+                                <Route path="/404" component={Error} />
+                                <Route path="/location" component={Location} />
+                                <Route path="/shop" component={Shop} />
+                                <Route exact path="/properties" component={PropertiesForSale} />
+                                <Route path="/investing" component={PropertiesForInvesting} />
+                                <Route path="/shop-grid" component={ShopGrid} />
+                                <Route path="/shop-left-sidebar" component={ShopLeftSidebar} />
+                                <Route path="/shop-right-sidebar" component={ShopRightSidebar} />
 
-                            <Route path="/product-details" component={ProdductDetails} />
-                            <Route path="/property-details" component={PropertyDetails} />
-                            <Route path="/investment-details" component={InvestmentDetails} />
-                            <Route path="/property-inquiry" component={PropertyInquiry} />
-                            {/* blog */}
-                            <Route path="/blog-grid" component={BlogGrid} />
-                            <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
-                            <Route path="/blog-right-sidebar" component={BlogRightSidebar} />
-                            <Route path="/blog" component={Blog} />
+                                <Route path="/product-details" component={ProdductDetails} />
+                                <Route path="/property-details" component={PropertyDetails} />
+                                <Route path="/investment-details" component={InvestmentDetails} />
+                                <Route path="/property-inquiry" component={PropertyInquiry} />
+                                {/* blog */}
+                                <Route path="/blog-grid" component={BlogGrid} />
+                                <Route path="/blog-left-sidebar" component={BlogLeftSidebar} />
+                                <Route path="/blog-right-sidebar" component={BlogRightSidebar} />
+                                <Route path="/blog" component={Blog} />
 
-                            <Route path="/blog-details" component={BlogDetails} />
-                            <Route path="/contact" component={Contact} />
-                            <Route path="/cart" component={Cart} />
-                            <Route path="/checkout" component={Checkout} />
-                            <Route path="/my-account" component={MyAccount} />
-                            <Route path="/login" component={Login} />
-                            <Route path="/register" component={Register} />
-                            <Route path="/add-listing" component={AddListing} />
-                            <Route path="/wishlist" component={Wishlist} />
-                            <Route path="/order-tracking" component={OrderTracking} />
-                            <Route path="/history" component={History} />
+                                <Route path="/blog-details" component={BlogDetails} />
+                                <Route path="/contact" component={Contact} />
+                                <Route path="/cart" component={Cart} />
+                                <Route path="/checkout" component={Checkout} />
+                                <Route path="/my-account" component={MyAccount} />
+                                <Route path="/login" component={Login} />
+                                <Route path="/register" component={Register} />
+                                <Route path="/add-listing" component={AddListing} />
+                                <Route path="/wishlist" component={Wishlist} />
+                                <Route path="/order-tracking" component={OrderTracking} />
+                                <Route path="/history" component={History} />
+                            </PrivateRoute>
                         </Switch>
                     </div>
-                    {/* </HashRouter> */}
-                </MemoryRouter>
+                </Router>
             </Provider>
         );
     }
+};
+
+const queryClient = new QueryClient()
+
+
+export default function App() {
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Root />
+        </QueryClientProvider>
+    )
 }
 
-export default Root;
-
-ReactDOM.render(<Root />, document.getElementById("quarter"));
+ReactDOM.render(<App />, document.getElementById("quarter"));

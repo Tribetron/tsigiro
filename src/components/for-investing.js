@@ -6,15 +6,15 @@ import Footer from "./global-components/footer";
 import Invest from "./shop-components/right-investing";
 
 const PropertiesForInvesting = () => {
-  return (
-    <div>
-      <Navbar />
-      <PageHeader headertitle="Properties For Investing" />
-      <Invest />
-      {/* <CallToActionV1 /> */}
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Navbar />
+            <PageHeader headertitle="Properties For Investing" />
+            <Invest />
+            {/* <CallToActionV1 /> */}
+            <Footer />
+        </div>
+    );
 };
 
 export default PropertiesForInvesting;
